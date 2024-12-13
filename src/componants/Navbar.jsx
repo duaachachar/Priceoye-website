@@ -1,203 +1,85 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import Badge from "@mui/material/Badge";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
 import { Icon } from "@iconify/react";
 import Paper from "@mui/material/Paper";
-import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
+import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
+import logo from "../assets/header-logo.svg";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+import OpenDrawer from "./Drawer/OpenDrawer";
+import { Hidden } from "@mui/material";
 
 export default function Navbar() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
 
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
   };
-
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
-
-  const menuId = "primary-search-account-menu";
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
-
-  const mobileMenuId = "primary-search-account-menu-mobile";
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
-
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton sx={{ p: "10px" }} aria-label="menu">
-            <Icon icon='bitcoin-icons:menu-filled' />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography>
-          <Box sx={{ margin: "auto" }} />
-          <Paper
-            component="form"
-            sx={{
-              p: "2px 4px",
-              display: "flex",
-              alignItems: "center",
-              width: 400,
-            }}
-          >
-            <InputBase
-              sx={{ ml: 1, flex: 1 }}
-              placeholder="Search Google Maps"
-              inputProps={{ "aria-label": "search google maps" }}
+    <>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar className="bg-color">
+            <Icon
+              icon="bitcoin-icons:menu-filled"
+              className="text-4xl"
+              onClick={toggleDrawer(true)}
             />
-            <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-              <KeyboardVoiceIcon/>
-            </IconButton>
-          </Paper>
-          <Box sx={{ margin: "auto" }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
+
+            <Link to="/">
+              <Box className="w-32 ml-3">
+                <img src={logo} alt="Logo" />
+              </Box>
+            </Link>
+
+            <Box sx={{ margin: "auto" }} />
+
+            <Paper
+              component="form"
+              sx={{
+                mx:'4px',
+                p: "2px 4px",
+                display: "flex",
+                alignItems: "center",
+                width: 400,
+              }}
             >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-    </Box>
+              <InputBase
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="Search..."
+                inputProps={{ "aria-label": "Search..." }}
+              />
+              <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+                <KeyboardVoiceIcon className="text-sky-400" />
+              </IconButton>
+            </Paper>
+
+            <Box sx={{ margin: "auto" }} />
+
+           
+            <Hidden smDown>
+              <Button
+                variant="contained"
+                class="bg-white border-2 text-sky-400 border-transparent hover:bg-none hover:border-2 hover:text-white hover:border-white hover:bg-transparent px-6 py-2 rounded mx-3"
+              >
+                <Link to="/login">Login</Link>
+              </Button>
+
+              <Button
+                variant="contained"
+                class="bg-transparent border-2 text-white border-white hover:bg-none hover:border-2 hover:text-sky-400 hover:border-transparent hover:bg-white px-6 py-2 rounded"
+              >
+                <Link to="/register">Register</Link>
+              </Button>
+            </Hidden>
+          </Toolbar>
+        </AppBar>
+      </Box>
+      <OpenDrawer open={open} toggleDrawer={toggleDrawer} />
+    </>
   );
 }

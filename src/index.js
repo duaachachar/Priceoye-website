@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import MainLayout from "./componants/Layout/MainLayout";
 import Register from "./componants/auth/Register";
 import Login from "./componants/auth/Login";
+import MyAccount from "./componants/account/MyAccount";
+import EditProfile from "./componants/account/EditProfile";
+import OrderList from "./componants/OrderList";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element:<Login/>
+      },
+      {
+        path: "/account",
+        element:<MyAccount/>
+      },
+      {
+        path: "/edit-profile",
+        element:<EditProfile/>
+      },
+      {
+        path: "/order-list",
+        element:<OrderList/>
       },
     ],
   },

@@ -44,7 +44,8 @@ const Login = () => {
   const LoginHandler = (data) => {
    
     reset();
-    navigate("/"); // Redirect to homepage after login
+    alert('Login successfull')
+    navigate("/");
   };
 
   return (

@@ -9,6 +9,7 @@ import Login from "./componants/auth/Login";
 import MyAccount from "./componants/account/MyAccount";
 import EditProfile from "./componants/account/EditProfile";
 import OrderList from "./componants/OrderList";
+import ErrorPage from "./componants/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element:<App/>
+        element:<App/>,
+       
       },
       {
         path: "/register",
@@ -37,9 +39,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/order-list",
-        element:<OrderList/>
+        element:<OrderList/>,
+      
       },
+      
+      
+       
+      
     ],
+    errorElement:<ErrorPage/>
   },
 ]);
 

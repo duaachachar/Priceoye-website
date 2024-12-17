@@ -9,17 +9,16 @@ import Paper from "@mui/material/Paper";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import logo from "../assets/header-logo.svg";
 import { Button, Menu, MenuItem, Typography } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import OpenDrawer from "./Drawer/OpenDrawer";
-import { Hidden } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export default function Navbar() {
   let [userData, setUserData] = useState({});
-  let [open, setOpen] = React.useState(false);
-  const navigate = useNavigate();
+  let [open, setOpen] = useState(false);
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const [anchorEl, setAnchorEl] = useState(null);
   const Open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -80,7 +79,7 @@ export default function Navbar() {
             <Box sx={{ margin: "auto" }} />
 
             {!userData.email || !userData.password ? (
-              <Hidden smDown>
+              <Box >
                 <Button
                   variant="contained"
                   class="bg-white border-2 text-sky-400 border-transparent hover:bg-none hover:border-2 hover:text-white hover:border-white hover:bg-transparent px-6 py-2 rounded mx-3"
@@ -94,20 +93,20 @@ export default function Navbar() {
                 >
                   <Link to="/register">Register</Link>
                 </Button>
-              </Hidden>
+              </Box>
             ) : (
-              <Hidden smDown>
+              <Box>
                 <Box className="flex items-center">
                   <AccountCircleIcon
                     fontSize="large"
-                    className="text-white mr-3"
+                    className="text-white ms-3"
                     id="basic-button"
                     aria-controls={open ? "basic-menu" : undefined}
                     aria-haspopup="true"
                     aria-expanded={open ? "true" : undefined}
                     onClick={handleClick}
                   />
-                  <Typography>{userData?.firstName}</Typography>
+                  <Typography variant="body1">{userData?.firstName}</Typography>
                 </Box>
                 <Menu
                   id="basic-menu"
@@ -122,7 +121,7 @@ export default function Navbar() {
                   <MenuItem onClick={handleClose}><Link to='/order-list'>Track my Order</Link></MenuItem>
                   <MenuItem onClick={handleClose}>Logout</MenuItem>
                 </Menu>
-              </Hidden>
+              </Box>
             )}
           </Toolbar>
         </AppBar>

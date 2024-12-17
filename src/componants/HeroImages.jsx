@@ -22,7 +22,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 const HeroImages = () => {
   return (
     <>
-      <Box className="my-12">
+      <Box className="my-8">
         <Swiper
           slidesPerView={1}
           spaceBetween={30}

@@ -9,13 +9,18 @@ import sixImg from "../assets/mobile-chargers-head.svg";
 import SevenImg from "../assets/bluetooth-speakers-head.svg";
 import EightImg from "../assets/tablets-head.svg";
 
+
+
+
 const HeroSection = () => {
   return (
     <Box className='bg-white border-b shadow-lg py-2'>
      
       <Box className="container mx-auto">
+
         <Box className="flex justify-center items-center">
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/3 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
+       
+    <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/3 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
             <img
               src={firstImg}
               alt="Mobiles"
@@ -25,6 +30,7 @@ const HeroSection = () => {
               Mobiles
             </Typography>
           </Box>
+       
           <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
             <img
               src={SecImg}
@@ -95,7 +101,9 @@ const HeroSection = () => {
               Tablets
             </Typography>
           </Box>
+         
         </Box>
+    
       </Box>
     </Box>
   );

@@ -23,7 +23,7 @@ import { Link } from "react-router-dom";
 
 const MyAccount = () => {
   return (
-    <>
+    <Box className="h-screen bg-gray-100">
       <Box className="relative my-5 bg-color h-48 md:h-64">
         <Box className="flex items-center justify-between">
           <Box className="flex items-center space-x-3 p-4 md:p-20">
@@ -58,85 +58,72 @@ const MyAccount = () => {
       </Box>
       {/* // Cards section */}
       <Box className=" mt-10">
-        <Grid container spacing={2} className="w-full p-5 ">
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={6}
-            className="bg-white shadow-md shadow-slate-400 p-5 my-4"
-          >
-            <Typography variant="h5">My orders</Typography>
-            <Grid container spacing={2} className="py-5">
-              <Grid item xs={4} md={2}>
-                <img src={PayIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Pay</Typography>
-              </Grid>
-              <Grid item xs={4} md={2}>
-                <img src={RecieveIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Recieve</Typography>
-              </Grid>
-              <Grid item xs={4} md={2}>
-                <img src={ReviewIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Review</Typography>
-              </Grid>
-              <Grid item xs={4} md={2}>
-                <img src={RefundIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Refund</Typography>
-              </Grid>
-              <Grid item xs={4} md={2}>
-                <img src={complaintIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Complaints</Typography>
-              </Grid>
-              <Grid item xs={4} md={2}>
-                <img src={AddonIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Addons</Typography>
-              </Grid>
-            </Grid>
-          </Grid>
+        <Box className="w-full  grid grid-cols-1  xs:grid-cols-1 lg:grid-cols-2 gap-5">
+          <Box className="bg-white shadow-md shadow-slate-400 p-5 mx-5">
+            <h5 className="text-lg font-semibold">My orders</h5>
+            <Box className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-5 py-5 mx-5">
+              <Box className="flex flex-col items-center">
+                <img src={PayIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Pay</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={RecieveIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Recieve</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={ReviewIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Review</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={RefundIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Refund</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={complaintIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Complaints</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={AddonIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Addons</p>
+              </Box>
+            </Box>
+          </Box>
 
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={6}
-            className="bg-white shadow-md shadow-slate-400 p-5 my-4"
-          >
-            <Typography variant="h5">Help</Typography>
-            <Grid
-              container
-              spacing={2}
-              className="py-4 grid grid-cols-5 py-5"
-            >
-              <Grid item xs={12} sm={4} md={2}>
-                <img src={FaqIcon} alt="" className="w-7" />
-                <Typography variant="body2"> FAQs</Typography>
-              </Grid>
-              <Grid item xs={12} sm={4} md={2}>
-                <img src={ParcelIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Open Parcel</Typography>
-              </Grid>
-              <Grid item xs={12} sm={4} md={2}>
-                <img src={ContactIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Contact</Typography>
-              </Grid>
-              <Grid item xs={12} sm={4} md={2}>
-                <img src={LocationOIcon} alt="" className="w-7" />
-                <Typography variant="body2"> Locations</Typography>
-              </Grid>
-              <Grid item xs={12} sm={4} md={2}>
-                <img src={EmiIcon} alt="" className="w-7" />
-                <Typography variant="body2"> EMI</Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+          <Box className="bg-white shadow-md shadow-slate-400 p-5 mx-5">
+            <h5 className="text-lg font-semibold">Help</h5>
+            <Box className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-5 gap-5 py-5">
+              <Box className="flex flex-col items-center">
+                <img src={FaqIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">FAQs</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={ParcelIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Open Parcel</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={ContactIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Contact</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={LocationOIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">Locations</p>
+              </Box>
+              <Box className="flex flex-col items-center">
+                <img src={EmiIcon} alt="" className="w-10" />
+                <p className="text-sm mt-2">EMI</p>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
       </Box>
 
       {/* Second cards section */}
-      <Box className="bg-white shadow-lg shadow-gray-400 my-5">
-        <Typography variant="h5" className="p-5 ps-72">Services</Typography>
-        <Box className='flex justify-around py-5'>
+      <Box className="bg-white shadow-lg shadow-gray-400 my-5 ">
+        <Typography variant="h5" className="p-5 ps-0 sm:ps-4 md:ps-72">
+          Services
+        </Typography>
+
+        <Box className="flex justify-around py-5">
           <Box>
             <img src={Support} alt="" srcset="" />
             <Typography variant="body1">Support</Typography>
@@ -153,23 +140,26 @@ const MyAccount = () => {
       </Box>
       {/* Third cards section */}
       <Box className="bg-white shadow-lg shadow-gray-400 my-5">
-        <Typography variant="h5" className="p-5 ps-72">Profile</Typography>
-        <Box className='flex justify-around py-5'>
+        <Typography variant="h5" className="p-5 ps-0 sm:ps-4 md:ps-72">
+          Profile
+        </Typography>
+
+        <Box className="flex justify-around py-5">
           <Box>
             <img src={address} alt="" srcset="" />
             <Typography variant="body1">Address Book</Typography>
           </Box>
-          <Link to='/edit-profile'> <Box>
-            <img src={Edit} alt="" srcset="" />
-            <Typography variant="body1">Edit Profile</Typography>
-          </Box>
+          <Link to="/edit-profile">
+            {" "}
+            <Box>
+              <img src={Edit} alt="" srcset="" />
+              <Typography variant="body1">Edit Profile</Typography>
+            </Box>
           </Link>
-          <Box>
-
-          </Box>
+          <Box></Box>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

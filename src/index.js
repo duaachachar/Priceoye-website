@@ -10,6 +10,7 @@ import MyAccount from "./componants/account/MyAccount";
 import EditProfile from "./componants/account/EditProfile";
 import OrderList from "./componants/OrderList";
 import ErrorPage from "./componants/ErrorPage";
+import ProtectedRoute from "./componants/Protected-route/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -18,36 +19,38 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element:<App/>,
-       
+        element: <App />,
       },
       {
         path: "/register",
-        element:<Register/>
+        element: <Register />,
       },
       {
         path: "/login",
-        element:<Login/>
+        element: <Login />,
       },
       {
         path: "/account",
-        element:<MyAccount/>
+        element: (
+          <ProtectedRoute>
+            <MyAccount/>
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/edit-profile",
-        element:<EditProfile/>
+        element: (
+          <ProtectedRoute>
+            <EditProfile />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/order-list",
-        element:<OrderList/>,
-      
+        element: <OrderList />,
       },
-      
-      
-       
-      
     ],
-    errorElement:<ErrorPage/>
+    errorElement: <ErrorPage />,
   },
 ]);
 

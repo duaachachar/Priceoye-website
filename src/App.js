@@ -10,8 +10,10 @@ function App() {
     <Box className='h-screen bg-gray-100'>
       <HeroSection />
       <HeroImages />
-      <FirstSection />
-      <VideoSection />
+     <Box>
+     <FirstSection />
+     </Box>
+      <VideoSection className='relative'/>
     </Box>
   );
 }

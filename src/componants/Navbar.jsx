@@ -9,11 +9,12 @@ import Paper from "@mui/material/Paper";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import logo from "../assets/header-logo.svg";
 import { Button, Menu, MenuItem, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import OpenDrawer from "./Drawer/OpenDrawer";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export default function Navbar() {
+  const navigate = useNavigate()
   let [userData, setUserData] = useState({});
   let [open, setOpen] = useState(false);
 
@@ -37,6 +38,12 @@ export default function Navbar() {
     setUserData(items);
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem("user"); 
+    setUserData({}); 
+    alert("You have successfully logged out!"); 
+    navigate('/register')
+  }; 
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -119,7 +126,7 @@ export default function Navbar() {
                 >
                   <MenuItem onClick={handleClose}><Link to='/account'>My account</Link></MenuItem>
                   <MenuItem onClick={handleClose}><Link to='/order-list'>Track my Order</Link></MenuItem>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  <MenuItem onClick={handleLogout}>Logout</MenuItem>
                 </Menu>
               </Box>
             )}

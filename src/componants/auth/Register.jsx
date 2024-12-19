@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import register from "../../assets/login-header-img.svg";
-import { Autocomplete, Box, Button, Card, Grid, IconButton, InputAdornment, OutlinedInput, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  Grid,
+  IconButton,
+  InputAdornment,
+  OutlinedInput,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -8,7 +18,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const schema = yup.object({
@@ -41,13 +51,12 @@ const Register = () => {
   });
 
   const signUpHandler = (data) => {
-    console.log(data, 'data');
+    console.log(data, "data");
     localStorage.setItem("user", JSON.stringify(data));
     reset();
 
-    navigate('/login')
-
-  }
+    navigate("/login");
+  };
   return (
     <Box className=" flex items-center justify-center">
       <Card className="w-full sm:w-1/2 lg:w-1/2 max-w-lg mx-auto mt-12 ">
@@ -127,7 +136,7 @@ const Register = () => {
                   {errors.password?.message}
                 </p>
               </Grid>
-              
+
               <Grid item xs={12}>
                 <Button
                   type="submit"
@@ -147,4 +156,3 @@ const Register = () => {
 };
 
 export default Register;
-

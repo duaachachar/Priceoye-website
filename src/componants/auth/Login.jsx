@@ -42,9 +42,8 @@ const Login = () => {
   });
 
   const LoginHandler = (data) => {
-   
     reset();
-    alert('Login successfull')
+    alert("Login successfull");
     navigate("/");
   };
 

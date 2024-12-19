@@ -29,9 +29,44 @@
     background: #fff;
     height: calc((100% - 30px) / 2) !important;
   
-    /* Center slide text vertically */
+  
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
+
+@media (max-width: 767px) {
+  .tablet-height {
+    height: 80vh; 
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-height {
+    height: 50vh; 
+  }
+}
+
+/* For laptop screen (1024px and above) */
+@media (min-width: 1024px) {
+  .tablet-height {
+    height: 70vh;
+  }
+}
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px; 
+    padding-left: 15px;
+    padding-right: 20px;
+  }
+}

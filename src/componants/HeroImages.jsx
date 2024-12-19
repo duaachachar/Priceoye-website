@@ -6,7 +6,7 @@ import FourthImage from "../assets/frre-repairs-hero.jpg";
 import FifthImage from "../assets/vaaada-hero.jpg";
 import sixthImage from "../assets/order-hero.jpg";
 import SevenImage from "../assets/bike-hero.jpg";
-import SubHeroImage from '../assets/sale-campaign-banner-p8vzf.gif'
+import SubHeroImage from "../assets/sale-campaign-banner-p8vzf.gif";
 import { Box } from "@mui/material";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -20,6 +20,7 @@ import image8 from "../assets/video-8-image.jpg";
 import image9 from "../assets/video-9-image.jpeg";
 import image10 from "../assets/video-10-image.jpg";
 import { Box, Card, Typography } from "@mui/material";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative } from "swiper/modules";
@@ -125,27 +126,27 @@ const Products = [
 
 const VideoSection = () => {
   return (
-    <Box className="container mx-auto my-7 mt-[230px]">
-      <Box className="text-center my-5">
+    <Box className="container mx-auto my-10 mt-[210px]">
+      <Box className="text-center my-10">
         <Typography variant="h6">Loved and Recommended</Typography>
         <Typography variant="body1">
           Influencers talk about priceoye as a trusted brand
         </Typography>
       </Box>
       <Swiper
-        slidesPerView={2} // Default value for mobile
+        slidesPerView={2}
         centeredSlides={false}
         spaceBetween={20}
         grabCursor={true}
         breakpoints={{
           640: {
-            slidesPerView: 2, // Mobile screens
+            slidesPerView: 2,
           },
           768: {
-            slidesPerView: 3, // Tablet screens
+            slidesPerView: 3,
           },
           1024: {
-            slidesPerView: 5, // Laptop/Desktop screens
+            slidesPerView: 5,
           },
         }}
         modules={[EffectCreative]}
@@ -154,9 +155,9 @@ const VideoSection = () => {
         {Products?.map((items, index) => {
           return (
             <SwiperSlide key={index}>
-              <Card className="w-full max-w-md h-96 shadow-lg rounded-lg relative">
+              <Card className="w-full max-w-md h-full shadow-lg rounded-lg relative">
                 <video
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-56 object-cover rounded-t-lg"
                   autoPlay
                   muted
                   loop

@@ -56,6 +56,7 @@ const MyAccount = () => {
           className="absolute top-62 md:top-32 right-0 w-40 h-62 md:w-32 md:h-62 object-contain p-0 mt-6"
         />
       </Box>
+      
       {/* // Cards section */}
       <Box className=" mt-10">
         <Box className="w-full  grid grid-cols-1  xs:grid-cols-1 lg:grid-cols-2 gap-5">
@@ -138,6 +139,7 @@ const MyAccount = () => {
           </Box>
         </Box>
       </Box>
+
       {/* Third cards section */}
       <Box className="bg-white shadow-lg shadow-gray-400 my-5">
         <Typography variant="h5" className="p-5 ps-0 sm:ps-4 md:ps-72">

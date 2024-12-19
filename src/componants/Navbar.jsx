@@ -8,16 +8,15 @@ import { Icon } from "@iconify/react";
 import Paper from "@mui/material/Paper";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import logo from "../assets/header-logo.svg";
-import { Button, Menu, MenuItem, Typography } from "@mui/material";
+import { Button, Hidden, Menu, MenuItem, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import OpenDrawer from "./Drawer/OpenDrawer";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export default function Navbar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   let [userData, setUserData] = useState({});
   let [open, setOpen] = useState(false);
-
 
   const [anchorEl, setAnchorEl] = useState(null);
   const Open = Boolean(anchorEl);
@@ -39,11 +38,11 @@ export default function Navbar() {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("user"); 
-    setUserData({}); 
-    alert("You have successfully logged out!"); 
-    navigate('/register')
-  }; 
+    localStorage.removeItem("user");
+    setUserData({});
+    alert("You have successfully logged out!");
+    navigate("/register");
+  };
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -86,7 +85,7 @@ export default function Navbar() {
             <Box sx={{ margin: "auto" }} />
 
             {!userData.email || !userData.password ? (
-              <Box >
+              <Hidden smDown>
                 <Button
                   variant="contained"
                   class="bg-white border-2 text-sky-400 border-transparent hover:bg-none hover:border-2 hover:text-white hover:border-white hover:bg-transparent px-6 py-2 rounded mx-3"
@@ -100,9 +99,9 @@ export default function Navbar() {
                 >
                   <Link to="/register">Register</Link>
                 </Button>
-              </Box>
+              </Hidden>
             ) : (
-              <Box>
+              <Hidden smDown>
                 <Box className="flex items-center">
                   <AccountCircleIcon
                     fontSize="large"
@@ -124,11 +123,15 @@ export default function Navbar() {
                     "aria-labelledby": "basic-button",
                   }}
                 >
-                  <MenuItem onClick={handleClose}><Link to='/account'>My account</Link></MenuItem>
-                  <MenuItem onClick={handleClose}><Link to='/order-list'>Track my Order</Link></MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/account">My account</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/order-list">Track my Order</Link>
+                  </MenuItem>
                   <MenuItem onClick={handleLogout}>Logout</MenuItem>
                 </Menu>
-              </Box>
+              </Hidden>
             )}
           </Toolbar>
         </AppBar>

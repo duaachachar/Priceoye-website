@@ -58,34 +58,28 @@ const EditProfile = () => {
 
   useEffect(() => {
     const storedUserData = JSON.parse(localStorage.getItem("user"));
-     if (storedUserData) {
-       setUserData(storedUserData);
-       reset(storedUserData); 
-     }
-   }, [reset]);
- 
+    if (storedUserData) {
+      setUserData(storedUserData);
+      reset(storedUserData);
+    }
+  }, [reset]);
 
   const signUpHandler = (data) => {
     localStorage.setItem("user", JSON.stringify(data));
 
-    navigate("/")
+    navigate("/");
   };
-
- 
-
 
   return (
     <Box className="h-screen bg-gray-200">
       <Box className="pt-10">
         <Box className="container mx-auto flex justify-center ">
-         
-         <Box className="flex items-center p-3 bg-white shadow-lg shadow-gray-400 w-2/3 ">
+          <Box className="flex items-center p-3 bg-white shadow-lg shadow-gray-400 w-2/3 ">
             <ArrowBackIosIcon />
-            <Link to='/account'>
-            <Typography variant="h6">Edit Profile</Typography>
+            <Link to="/account">
+              <Typography variant="h6">Edit Profile</Typography>
             </Link>
           </Box>
-       
         </Box>
         <Box className="container mx-auto flex justify-center my-5 scale-2 py-3">
           <form
@@ -161,9 +155,8 @@ const EditProfile = () => {
               <Box className="ms-5 mt-3">
                 <Button
                   type="submit"
-                 
                   variant="contained"
-                   className="bg-gray-400 ms-5"
+                  className="bg-gray-400 ms-5"
                 >
                   Submit
                 </Button>

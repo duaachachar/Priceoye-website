@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         path: "/account",
         element: (
           <ProtectedRoute>
-            <MyAccount/>
+            <MyAccount />
           </ProtectedRoute>
         ),
       },

@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../../assets/banner-2-pink.png";
+import Banner from "../../assets/banner-4.png";
 import { Box, Button, Card, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Img1 from "../../assets/redmi-card-1.webp";
@@ -15,6 +15,7 @@ import Img10 from "../../assets/audionic-airbud-card.webp";
 import Img11 from "../../assets/imilab-imiki-card.webp";
 import Img12 from "../../assets/airpods-4-card.webp";
 import saleImg from "../../assets/12.12-sale.png";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -125,7 +126,7 @@ const AllProducts = [
   },
 ];
 
-const FirstSection = () => {
+const SecondSection = () => {
   return (
     <Box className="relative">
       <Box className="w-full mt-7 relative">
@@ -238,4 +239,4 @@ const FirstSection = () => {
   );
 };
 
-export default FirstSection;
+export default SecondSection;

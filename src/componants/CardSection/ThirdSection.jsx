@@ -1,19 +1,19 @@
 import React from "react";
-import Banner from "../../assets/banner-4.png";
+import Banner from "../../assets/banner-3.png";
 import { Box, Button, Card, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Img1 from "../../assets/yolo-ultron-smart-watch-card-3-section.webp";
-import Img2 from "../../assets/samsung-galaxy-fit-3-with-card-3-section.webp";
-import Img3 from "../../assets/g-tide-r1-smart-watch-pakistan-card-3-section.webp";
-import Img4 from "../../assets/card-3.webp";
-import Img5 from "../../assets/ultra-smart-watch-7-in-card-3-section.webp";
-import Img6 from "../../assets/samsung-galaxy-watch-6-bluetooth-card-3-section.webp";
-import Img7 from "../../assets/huawei-band-9-card-3-section.webp";
-import Img8 from "../../assets/hk9-pro-max-plus-smartwatch-card-3-section.webp";
-import Img9 from "../../assets/mibro-watch-lite-3-card-3-section.webp";
-import Img10 from "../../assets/xiaomi-redmi-watch-5-card-3-section.webp";
-import Img11 from "../../assets/realme-watch-pakistan-card-3-section.webp";
-import Img12 from "../../assets/card-3-6.webp";
+import Img1 from "../../assets/xiaomi-poco-c75-pakistan-card-4-section.webp";
+import Img2 from "../../assets/realme-c61-pakistan-priceoye-card-4-section.webp";
+import Img3 from "../../assets/xiaomi-redmi-a3-pakistan4-section.webp";
+import Img4 from "../../assets/oppo-a3-pakistan-priceoye-card-4-section.webp";
+import Img5 from "../../assets/apple-iphone-16-pro-pakistan-card-4-section.webp";
+import Img6 from "../../assets/infinix-zero-40-4g-pakistan-card-4-section.webp";
+import Img7 from "../../assets/itel-s24-pakistan-priceoye-card-4-section.webp";
+import Img8 from "../../assets/tecno-spark-30-pakistan-card-4-section.webp";
+import Img9 from "../../assets/samsung-galaxy-z-fold-6-card-4-section.webp";
+import Img10 from "../../assets/realme-13-plus-5g-pakistan-card-4-section.webp";
+import Img11 from "../../assets/apple-iphone-16-pro-max-pakistan-card-4-section.webp";
+import Img12 from "../../assets/vivo-v40e-pakistan-priceoye-card-4-section.webp";
 import saleImg from "../../assets/12.12-sale.png";
 
 
@@ -126,7 +126,7 @@ const AllProducts = [
   },
 ];
 
-const SecondSection = () => {
+const ThirdSection = () => {
   return (
     <Box className="relative">
       <Box className="w-full mt-7 relative">
@@ -142,7 +142,7 @@ const SecondSection = () => {
         <Box className="container mx-auto absolute top-16 z-10">
           <Box className="flex justify-between mx-5">
             <Typography variant="h6" className="text-white font-bold">
-              Latest Smart Watches
+              Latest Mobile
             </Typography>
             <Button
               variant="contained"
@@ -239,4 +239,4 @@ const SecondSection = () => {
   );
 };
 
-export default SecondSection;
+export default ThirdSection;

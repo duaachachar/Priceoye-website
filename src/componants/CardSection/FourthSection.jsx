@@ -1,21 +1,20 @@
 import React from "react";
-import Banner from "../../assets/banner-4.png";
+import Banner from "../../assets/banner-2-pink.png";
 import { Box, Button, Card, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Img1 from "../../assets/yolo-ultron-smart-watch-card-3-section.webp";
-import Img2 from "../../assets/samsung-galaxy-fit-3-with-card-3-section.webp";
-import Img3 from "../../assets/g-tide-r1-smart-watch-pakistan-card-3-section.webp";
-import Img4 from "../../assets/card-3.webp";
-import Img5 from "../../assets/ultra-smart-watch-7-in-card-3-section.webp";
-import Img6 from "../../assets/samsung-galaxy-watch-6-bluetooth-card-3-section.webp";
-import Img7 from "../../assets/huawei-band-9-card-3-section.webp";
-import Img8 from "../../assets/hk9-pro-max-plus-smartwatch-card-3-section.webp";
-import Img9 from "../../assets/mibro-watch-lite-3-card-3-section.webp";
-import Img10 from "../../assets/xiaomi-redmi-watch-5-card-3-section.webp";
-import Img11 from "../../assets/realme-watch-pakistan-card-3-section.webp";
-import Img12 from "../../assets/card-3-6.webp";
+import Img1 from "../../assets/vgr-stainless-steel-blade-trimmer-card-5.webp";
+import Img2 from "../../assets/remington-pilot-personal-groomer-kit-pg180-card-5.webp";
+import Img3 from "../../assets/kemei-3-in-1-rechargeable-electric-shaver-card-5.webp";
+import Img4 from "../../assets//mi-5-blade-electric-shaver-pakistan-card-5.webp";
+import Img5 from "../../assets/kemei-7-in-1-grooming-kit-shaving-card-5.webp";
+import Img6 from "../../assets/dingling-professional-rf-608b-card-5.webp";
+import Img7 from "../../assets/vgr-zero-t-blade-trimmer-v-card-5.webp";
+import Img8 from "../../assets/kemei-km-6331-3-in-1-grooming-card-5.webp";
+import Img9 from "../../assets/dinglong-professional-beard-and-card-5.webp";
+import Img10 from "../../assets/kemei-km-6330-hair-beard-card-5.webp";
+import Img11 from "../../assets/kemei-km-1613-hair-clippers-men-card-5.webp";
+import Img12 from "../../assets/mi-hair-clipper-pakistan-card-5.webp";
 import saleImg from "../../assets/12.12-sale.png";
-
 
 // Import Swiper styles
 import "swiper/css";
@@ -126,7 +125,7 @@ const AllProducts = [
   },
 ];
 
-const SecondSection = () => {
+const FourthSection = () => {
   return (
     <Box className="relative">
       <Box className="w-full mt-7 relative">
@@ -142,7 +141,7 @@ const SecondSection = () => {
         <Box className="container mx-auto absolute top-16 z-10">
           <Box className="flex justify-between mx-5">
             <Typography variant="h6" className="text-white font-bold">
-              Latest Smart Watches
+            Latest Trimmers Shaver
             </Typography>
             <Button
               variant="contained"
@@ -239,4 +238,4 @@ const SecondSection = () => {
   );
 };
 
-export default SecondSection;
+export default FourthSection;

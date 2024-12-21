@@ -7,7 +7,7 @@ import four from "../assets/shipping-feature-4.svg";
 
 const SubFooter = () => {
   return (
-    <Box className="bg-white my-5">
+    <Box className="bg-white my-5 lg:mt-56">
       <Box className="container mx-auto mt-[230px]  py-5">
         <Box className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4  py-5">
           <Box className="flex flex-col items-center justify-center text-center">

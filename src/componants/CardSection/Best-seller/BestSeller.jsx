@@ -50,19 +50,21 @@ const BestSeller = () => {
   return (
     <Box className="my-5">
       <Box className="text-center my-5">
-        <Typography variant="h6" className="!font-bold">Best Seller</Typography>
+        <Typography variant="h6" className="!font-bold">
+          Best Seller
+        </Typography>
         <Typography variant="body1">Get the best prices in town</Typography>
       </Box>
       <Box className="container mx-auto">
-        <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
-          <Box className="">
+        <Box className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">
+          <Box className="w-full">
             <Card className="shadow-lg shadow-slate-300 relative w-full h-full p-4">
               <Typography variant="body2" className="!font-bold">
                 Anker Soundcore Liberty 4 NC Earbuds
               </Typography>
               <Box className="w-2/3 pt-4 mx-auto">
                 <img
-                  style={{ width: "w-full", height: "auto" }}
+                  style={{ width: "100%", height: "auto" }}
                   className=" object-contain"
                   src={Img1}
                   alt="Main Image"
@@ -78,7 +80,7 @@ const BestSeller = () => {
                 />
               </Box>
 
-              <Box className='flex justify-center'>
+              <Box className="flex justify-center">
                 <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/3 ms-4 mt-0">
                   <span className="text-yellow-500 text-lg">★</span>
                   <Typography variant="body2" className="ml-1 font-bold">
@@ -88,12 +90,7 @@ const BestSeller = () => {
               </Box>
 
               <Box className="p-4 mt-9">
-        
-
-                <Typography
-                  variant="h6"
-                  className="text-lg font-bold text-black"
-                >
+                <Typography variant="h6" className="text-lg font-bold text-black">
                   RS 15799
                 </Typography>
 
@@ -106,65 +103,68 @@ const BestSeller = () => {
               </Box>
             </Card>
           </Box>
-          <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
-            {AllProducts?.map((items) => {
-              return (
-                <Card className="shadow-lg shadow-slate-300 relative w-full p-4">
-                  <Box className="w-full pt-4 flex space-between">
-                    <Typography
-                      variant="body2"
-                      className="text-sm !font-bold truncate my-2 "
-                    >
-                      {items?.title}
+
+          {/* Products Grid */}
+          <Box className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-2 gap-3">
+            {AllProducts.map((items, index) => (
+              <Card
+                className="shadow-lg shadow-slate-300 relative w-full p-4"
+                key={index}
+              >
+                <Box className="w-full pt-4 flex justify-between">
+                  <Typography
+                    variant="body2"
+                    className="text-sm !font-bold truncate my-2"
+                  >
+                    {items?.title}
+                  </Typography>
+                  <img
+                    style={{ width: "8rem", height: "auto" }}
+                    className="mx-auto object-contain"
+                    src={items?.Image}
+                    alt="Main Image"
+                  />
+                </Box>
+
+                <Box className="absolute top-4 right-4">
+                  <img
+                    style={{ width: "4rem", height: "auto" }}
+                    className="object-contain"
+                    src={items?.SaleImg}
+                    alt="Sale"
+                  />
+                </Box>
+
+                <Box className="flex justify-end">
+                  <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/2 mt-0">
+                    <span className="text-yellow-500 text-sm">★</span>
+                    <Typography variant="body2" className="ml-1 font-bold">
+                      {items?.reviews}
                     </Typography>
-                    <img
-                      style={{ width: "8rem", height: "auto" }}
-                      className="mx-auto object-contain"
-                      src={items?.Image}
-                      alt="Main Image"
-                    />
                   </Box>
+                </Box>
 
-                  <Box className="absolute top-4 right-4">
-                    <img
-                      style={{ width: "4rem", height: "auto" }}
-                      className="object-contain"
-                      src={items?.SaleImg}
-                      alt="Sale"
-                    />
-                  </Box>
+                <Box className="p-4">
+                  <Typography
+                    variant="h6"
+                    className="text-lg font-bold text-black"
+                  >
+                    RS {items?.price}
+                  </Typography>
 
-                  <Box className="flex justify-end">
-                    <Box className="flex  items-center bg-orange-100 px-2 rounded-lg w-1/2 mt-0">
-                      <span className="text-yellow-500 text-sm">★</span>
-                      <Typography variant="body2" className="ml-1 font-bold">
-                        {items?.reviews}
-                      </Typography>
-                    </Box>
-                  </Box>
-
-                  <Box className="p-4">
-                    <Typography
-                      variant="h6"
-                      className="text-lg font-bold text-black"
-                    >
-                      RS {items?.price}
-                    </Typography>
-
-                    <Box className="flex justify-between items-center space-x-2 mt-1">
-                      <span className="text-gray-500 line-through">
-                        Rs {items?.oldPrice}
+                  <Box className="flex justify-between items-center space-x-2 mt-1">
+                    <span className="text-gray-500 line-through">
+                      Rs {items?.oldPrice}
+                    </span>
+                    <Box className="bg-gray-100 px-2 py-1 rounded-lg">
+                      <span className="text-green-500 text-sm">
+                        {items?.percent}
                       </span>
-                      <Box className="bg-gray-100 px-2 py-1 rounded-lg">
-                        <span className="text-green-500 text-sm">
-                          {items?.percent}
-                        </span>
-                      </Box>
                     </Box>
                   </Box>
-                </Card>
-              );
-            })}
+                </Box>
+              </Card>
+            ))}
           </Box>
         </Box>
       </Box>

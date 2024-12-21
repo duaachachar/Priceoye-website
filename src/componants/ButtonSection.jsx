@@ -13,10 +13,10 @@ import tenImg from "../assets/nokia.svg";
 
 const ButtonSection = () => {
   return (
-    <Box className="container mx-auto mt-[200px]">
+    <Box className="container mx-auto  mt-32 md:mt-32 lg:mt-56">
       <Box className="flex justify-between mx-5 my-5">
         <Typography variant="h6" className="font-bold">
-        Shop by Price
+          Shop by Price
         </Typography>
         <Button
           variant="outlined"
@@ -86,7 +86,7 @@ const ButtonSection = () => {
             className="w-full h-full !bg-yellow-300 !text-black relative overflow-hidden group"
           >
             <span className="absolute inset-0 bg-blue-400 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 ease-in-out"></span>
-            <span className="relative z-10"> Rs 100000- Rs 1500000</span>
+            <span className="relative z-10"> 100000- 1500000</span>
           </Button>
         </Box>
         <Box>
@@ -101,7 +101,7 @@ const ButtonSection = () => {
       </Box>
       <Box className="flex justify-between mx-5 my-12">
         <Typography variant="h6" className="font-bold ">
-        Shop by Brand
+          Shop by Brand
         </Typography>
         <Button
           variant="outlined"
@@ -111,26 +111,39 @@ const ButtonSection = () => {
         </Button>
       </Box>
       <Box className="flex justify-between flex-wrap gap-2">
-        {[
-          firstImg,
-          SEcImg,
-          thirdImg,
-          fourthImg,
-          fifthImg,
-          sixImg,
-          sevenImg,
-          eightImg,
-          nineImg,
-          tenImg,
-        ].map((imgSrc, index) => (
-          <Box
-            key={index}
-            className="w-20 h-20 flex justify-between items-center"
-          >
-            <img src={imgSrc} alt="" className="w-full h-full object-cover" />
-          </Box>
-        ))}
+  {[
+    firstImg,
+    SEcImg,
+    thirdImg,
+    fourthImg,
+    fifthImg,
+    sixImg,
+    sevenImg,
+    eightImg,
+    nineImg,
+    tenImg,
+  ]
+    // Determine how many images to show based on screen size
+    .slice(
+      0,
+      window.innerWidth >= 1024 // Desktop and larger
+        ? 10
+        : window.innerWidth >= 768 // Laptop
+        ? 9
+        : window.innerWidth >= 640 // Tablet
+        ? 6
+        : 4 // Mobile
+    )
+    .map((imgSrc, index) => (
+      <Box
+        key={index}
+        className="w-20 h-20 flex justify-between items-center"
+      >
+        <img src={imgSrc} alt="" className="w-full h-full object-cover" />
       </Box>
+    ))}
+</Box>
+
     </Box>
   );
 };

@@ -34,19 +34,19 @@ const Reviews = () => {
       </Box>
       <Box className="flex flex-wrap gap-2">
         <Swiper
-          slidesPerView={9}
+          slidesPerView={5} // Default for mobile screens
           centeredSlides={false}
           spaceBetween={10}
           grabCursor={true}
           breakpoints={{
             640: {
-              slidesPerView: 3,
+              slidesPerView: 5, // 5 images on mobile screens
             },
             768: {
-              slidesPerView: 6,
+              slidesPerView: 6, // 6 images on tablet screens
             },
             1024: {
-              slidesPerView: 9,
+              slidesPerView: 9, // 9 images on larger screens
             },
           }}
           modules={[EffectCreative]}

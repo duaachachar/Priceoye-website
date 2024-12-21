@@ -16,7 +16,6 @@ import Img11 from "../../assets/apple-iphone-16-pro-max-pakistan-card-4-section.
 import Img12 from "../../assets/vivo-v40e-pakistan-priceoye-card-4-section.webp";
 import saleImg from "../../assets/12.12-sale.png";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
@@ -31,39 +30,39 @@ const AllProducts = [
   {
     Image: Img1,
     SaleImg: saleImg,
-    reviews: "Redmi Buds 6 Active Wireless Earbuds",
-    price: 4549,
+    reviews: "Realme 13+ 5G",
+    price: 77999,
     oldPrice: 7399,
     percent: "30% off",
   },
   {
     Image: Img2,
     SaleImg: saleImg,
-    reviews: "Realme T100 Wireless Earbuds",
-    price: 4999,
+    reviews: "Xiaomi Poco C75",
+    price: 31999,
     oldPrice: 7399,
     percent: "30% off",
   },
   {
     Image: Img3,
     SaleImg: saleImg,
-    reviews: "Nothing Buds 2",
-    price: 13499,
+    reviews: "Vivo40",
+    price: 89999,
     oldPrice: 20000,
     percent: "33% off",
   },
   {
     Image: Img4,
     SaleImg: saleImg,
-    reviews: "Anker R50i Earbuds",
-    price: 4611,
+    reviews: "Xiaomi Redmi A3",
+    price: 19929,
     oldPrice: 7199,
     percent: "36% off",
   },
   {
     Image: Img5,
     SaleImg: saleImg,
-    reviews: "Soundpeats Engine4 WirelessEarbuds",
+    reviews: "Samsung Galaxy Buds",
     price: 10518,
     oldPrice: 14000,
     percent: "36% off",
@@ -79,39 +78,39 @@ const AllProducts = [
   {
     Image: Img7,
     SaleImg: saleImg,
-    reviews: "Xiaomi Redmi Buds 6 Lite",
-    price: 5899,
+    reviews: "Tecno Spark 30",
+    price: 35899,
     oldPrice: 6999,
     percent: "16% off",
   },
   {
     Image: Img8,
     SaleImg: saleImg,
-    reviews: "OCY T13 ANC 2",
-    price: 5499,
+    reviews: "Samsung Galaxy Z Fold 6",
+    price: 527999,
     oldPrice: 6000,
     percent: "8% off",
   },
   {
     Image: Img9,
     SaleImg: saleImg,
-    reviews: "Realme Buds T110",
-    price: 4999,
+    reviews: "Itel S24",
+    price: 25999,
     oldPrice: 10500,
     percent: "50% off",
   },
   {
     Image: Img10,
     SaleImg: saleImg,
-    reviews: "Audionic Airbud 550",
-    price: 3811,
+    reviews: "Realme C61",
+    price: 29529,
     oldPrice: 9999,
     percent: "62% off",
   },
   {
     Image: Img11,
     SaleImg: saleImg,
-    reviews: "Imiki MT2 Wireless Erbuds",
+    reviews: "Oppo A3",
     price: 3899,
     oldPrice: 6999,
     percent: "44% off",
@@ -195,11 +194,13 @@ const ThirdSection = () => {
                       />
                     </Box>
 
-                    <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/3 ms-4 mt-0">
-                      <span className="text-yellow-500 text-lg">★</span>
-                      <Typography variant="body2" className="ml-1 font-bold">
-                        4.8 reviews
-                      </Typography>
+                    <Box className="flex ms-5">
+                      <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/2 mt-0">
+                        <span className="text-yellow-500 text-sm">★</span>
+                        <Typography variant="body2" className="ml-1 font-bold">
+                          4.8 reviews
+                        </Typography>
+                      </Box>
                     </Box>
 
                     <Box className="p-4">

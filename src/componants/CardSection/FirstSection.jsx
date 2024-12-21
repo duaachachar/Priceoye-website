@@ -194,11 +194,13 @@ const FirstSection = () => {
                       />
                     </Box>
 
-                    <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/3 ms-4 mt-0">
-                      <span className="text-yellow-500 text-lg">★</span>
-                      <Typography variant="body2" className="ml-1 font-bold">
-                        4.8 reviews
-                      </Typography>
+                    <Box className="flex ms-5">
+                      <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/2 mt-0">
+                        <span className="text-yellow-500 text-sm">★</span>
+                        <Typography variant="body2" className="ml-1 font-bold">
+                          4.8 reviews
+                        </Typography>
+                      </Box>
                     </Box>
 
                     <Box className="p-4">

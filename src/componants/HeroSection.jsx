@@ -9,92 +9,77 @@ import sixImg from "../assets/mobile-chargers-head.svg";
 import SevenImg from "../assets/bluetooth-speakers-head.svg";
 import EightImg from "../assets/tablets-head.svg";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCreative } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./video.css";
+
+const items = [
+  { img: firstImg, label: "Mobiles" },
+  { img: SecImg, label: "Wireless Earbuds" },
+  { img: ThirdImg, label: "Smart Watches" },
+  { img: fourthImg, label: "Trimmers Shaver" },
+  { img: fifthImg, label: "Power Banks" },
+  { img: sixImg, label: "Wall Charges" },
+  { img: SevenImg, label: "Bluetooth Speakers" },
+  { img: EightImg, label: "Tablets" },
+];
+
 const HeroSection = () => {
   return (
-    <Box className="bg-white border-b shadow-lg py-2">
-      <Box className="container mx-auto">
-        <Box className="flex justify-center items-center">
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/3 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={firstImg}
-              alt="Mobiles"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Mobiles
-            </Typography>
-          </Box>
-
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={SecImg}
-              alt="Wireless Earbuds"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Wireless Earbuds
-            </Typography>
-          </Box>
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={ThirdImg}
-              alt="Smart Watches"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Smart Watches
-            </Typography>
-          </Box>
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={fourthImg}
-              alt="Trimmers Shaver"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Trimmers Shaver
-            </Typography>
-          </Box>
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={fifthImg}
-              alt="Power Banks"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Power Banks
-            </Typography>
-          </Box>
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={sixImg}
-              alt="Wall charges"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Wall charges
-            </Typography>
-          </Box>
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={SevenImg}
-              alt="Bluetooth speakers"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Bluetooth speakers
-            </Typography>
-          </Box>
-          <Box className="flex flex-col items-center cursor-pointer w-full sm:w-1/6 md:w-1/8 lg:w-1/10 xl:w-1/12 hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300">
-            <img
-              src={EightImg}
-              alt="Tablets"
-              className="w-10 h-10 object-cover mb-2"
-            />
-            <Typography variant="body2" className="text-center text-xs">
-              Tablets
-            </Typography>
-          </Box>
+    <Box className="bg-white">
+      <Box className="container mx-auto ">
+        <Box className="flex flex-wrap">
+          <Swiper
+            slidesPerView={3} 
+            centeredSlides={false}
+            spaceBetween={0}
+            grabCursor={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 3, 
+              },
+              768: {
+                slidesPerView: 6, 
+              },
+              1024: {
+                slidesPerView: 9, 
+              },
+            }}
+            modules={[EffectCreative]}
+            className="mySwiper"
+          >
+            {items.map((item, index) => (
+              <SwiperSlide key={index}>
+                <Box
+                  className="flex flex-col items-center justify-around cursor-pointer hover:bg-gray-100 hover:border-b-2 hover:border-blue-500 transition-all duration-300 py-2"
+                  style={{ minHeight: "90px", maxHeight: "90px" }}
+                >
+                  <Box
+                    sx={{
+                      minHeight: "40px",
+                      maxHeight: "40px",
+                      minWidth: "40px",
+                      maxWidth: "40px",
+                    }}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.label}
+                      className="object-cover rounded-md"
+                    />
+                  </Box>
+                  <Typography variant="body2" className="text-center text-xs">
+                    {item.label}
+                  </Typography>
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </Box>
       </Box>
     </Box>
@@ -102,3 +87,67 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+// // export default HeroSection;
+
+// // Import Swiper React components
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { EffectCreative } from "swiper/modules";
+
+// // Import Swiper styles
+// import "swiper/css";
+// import "swiper/css/pagination";
+
+// import "./video.css";
+
+// const HeroSection = () => {
+//   return (
+//     <Box className="container mx-auto ">
+//       <Box className="flex flex-wrap">
+//         <Swiper
+//           slidesPerView={9}
+//           centeredSlides={false}
+//           spaceBetween={0}
+//           grabCursor={true}
+//           breakpoints={{
+//             640: {
+//               slidesPerView: 3,
+//             },
+//             768: {
+//               slidesPerView: 6,
+//             },
+//             1024: {
+//               slidesPerView: 9,
+//             },
+//           }}
+//           modules={[EffectCreative]}
+//           className="mySwiper"
+//         >
+//           {[
+//             firstImg,
+//             SecImg,
+//             ThirdImg,
+//             fourthImg,
+//             fifthImg,
+//             sixImg,
+//             SevenImg,
+//             EightImg,
+
+//           ].map((imgSrc, index) => (
+//             <SwiperSlide key={index}>
+//               <Box className="flex justify-center items-center">
+//                 <img
+//                   src={imgSrc}
+//                   alt=""
+//                   className="object-contain rounded-md"
+//                 />
+//               </Box>
+//             </SwiperSlide>
+//           ))}
+//         </Swiper>
+//       </Box>
+//     </Box>
+//   );
+// };
+
+// export default HeroSection;

@@ -16,7 +16,6 @@ import Img11 from "../../assets/realme-watch-pakistan-card-3-section.webp";
 import Img12 from "../../assets/card-3-6.webp";
 import saleImg from "../../assets/12.12-sale.png";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
@@ -31,31 +30,31 @@ const AllProducts = [
   {
     Image: Img1,
     SaleImg: saleImg,
-    reviews: "Redmi Buds 6 Active Wireless Earbuds",
-    price: 4549,
-    oldPrice: 7399,
+    reviews: "Ultra Smart Watch With 7 Straps",
+    price: 1679,
+    oldPrice: 60000,
     percent: "30% off",
   },
   {
     Image: Img2,
     SaleImg: saleImg,
-    reviews: "Realme T100 Wireless Earbuds",
-    price: 4999,
+    reviews: "HK9 PRO Max Plus Smartwatch",
+    price: 5799,
     oldPrice: 7399,
     percent: "30% off",
   },
   {
     Image: Img3,
     SaleImg: saleImg,
-    reviews: "Nothing Buds 2",
-    price: 13499,
+    reviews: "yOLO Ultron Smart Watch",
+    price: 7999,
     oldPrice: 20000,
     percent: "33% off",
   },
   {
     Image: Img4,
     SaleImg: saleImg,
-    reviews: "Anker R50i Earbuds",
+    reviews: "Realme smart watches",
     price: 4611,
     oldPrice: 7199,
     percent: "36% off",
@@ -63,8 +62,8 @@ const AllProducts = [
   {
     Image: Img5,
     SaleImg: saleImg,
-    reviews: "Soundpeats Engine4 WirelessEarbuds",
-    price: 10518,
+    reviews: "G-TiDE R1 Smart Watch",
+    price: 4899,
     oldPrice: 14000,
     percent: "36% off",
   },
@@ -79,40 +78,40 @@ const AllProducts = [
   {
     Image: Img7,
     SaleImg: saleImg,
-    reviews: "Xiaomi Redmi Buds 6 Lite",
-    price: 5899,
+    reviews: "Samsung Galaxy Fit 3 With OneYear Brand Warranty",
+    price: 13499,
     oldPrice: 6999,
     percent: "16% off",
   },
   {
     Image: Img8,
     SaleImg: saleImg,
-    reviews: "OCY T13 ANC 2",
-    price: 5499,
+    reviews: "Mibro Watch Lite 3 With Dual",
+    price: 14999,
     oldPrice: 6000,
     percent: "8% off",
   },
   {
     Image: Img9,
     SaleImg: saleImg,
-    reviews: "Realme Buds T110",
-    price: 4999,
+    reviews: "Mibro Watch Lite 3 With Dual Strap",
+    price: 11999,
     oldPrice: 10500,
     percent: "50% off",
   },
   {
     Image: Img10,
     SaleImg: saleImg,
-    reviews: "Audionic Airbud 550",
-    price: 3811,
+    reviews: "HUAWEI Band 9",
+    price: 7899,
     oldPrice: 9999,
     percent: "62% off",
   },
   {
     Image: Img11,
     SaleImg: saleImg,
-    reviews: "Imiki MT2 Wireless Erbuds",
-    price: 3899,
+    reviews: "Xiaomi Redmi Watch 5 Active",
+    price: 8699,
     oldPrice: 6999,
     percent: "44% off",
   },
@@ -195,11 +194,13 @@ const SecondSection = () => {
                       />
                     </Box>
 
-                    <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/3 ms-4 mt-0">
-                      <span className="text-yellow-500 text-lg">★</span>
-                      <Typography variant="body2" className="ml-1 font-bold">
-                        4.8 reviews
-                      </Typography>
+                    <Box className="flex ms-5">
+                      <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/2 mt-0">
+                        <span className="text-yellow-500 text-sm">★</span>
+                        <Typography variant="body2" className="ml-1 font-bold">
+                         4.8 reviews
+                        </Typography>
+                      </Box>
                     </Box>
 
                     <Box className="p-4">

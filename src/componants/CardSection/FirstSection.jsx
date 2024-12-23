@@ -2,6 +2,9 @@ import React from "react";
 import Banner from "../../assets/banner-2-pink.png";
 import { Box, Button, Card, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setSelectedCard } from "../../Slices/cardSlice";
 import Img1 from "../../assets/redmi-card-1.webp";
 import Img2 from "../../assets/earbuds-card-2.webp";
 import Img3 from "../../assets/buds-pro-2.webp";
@@ -28,6 +31,7 @@ import { EffectCreative, Grid } from "swiper/modules";
 
 const AllProducts = [
   {
+    id: 1,
     Image: Img1,
     SaleImg: saleImg,
     reviews: "Redmi Buds 6 Active Wireless Earbuds",
@@ -36,6 +40,7 @@ const AllProducts = [
     percent: "30% off",
   },
   {
+    id: 2,
     Image: Img2,
     SaleImg: saleImg,
     reviews: "Realme T100 Wireless Earbuds",
@@ -44,6 +49,7 @@ const AllProducts = [
     percent: "30% off",
   },
   {
+    id: 3,
     Image: Img3,
     SaleImg: saleImg,
     reviews: "Nothing Buds 2",
@@ -52,6 +58,7 @@ const AllProducts = [
     percent: "33% off",
   },
   {
+    id: 4,
     Image: Img4,
     SaleImg: saleImg,
     reviews: "Anker R50i Earbuds",
@@ -60,6 +67,7 @@ const AllProducts = [
     percent: "36% off",
   },
   {
+    id: 5,
     Image: Img5,
     SaleImg: saleImg,
     reviews: "Soundpeats Engine4 WirelessEarbuds",
@@ -68,6 +76,7 @@ const AllProducts = [
     percent: "36% off",
   },
   {
+    id: 6,
     Image: Img6,
     SaleImg: saleImg,
     reviews: "Samsung Galaxy Buds 3 Pro",
@@ -76,6 +85,7 @@ const AllProducts = [
     percent: "29% off",
   },
   {
+    id: 7,
     Image: Img7,
     SaleImg: saleImg,
     reviews: "Xiaomi Redmi Buds 6 Lite",
@@ -84,6 +94,7 @@ const AllProducts = [
     percent: "16% off",
   },
   {
+    id: 8,
     Image: Img8,
     SaleImg: saleImg,
     reviews: "OCY T13 ANC 2",
@@ -92,6 +103,7 @@ const AllProducts = [
     percent: "8% off",
   },
   {
+    id: 9,
     Image: Img9,
     SaleImg: saleImg,
     reviews: "Realme Buds T110",
@@ -100,6 +112,7 @@ const AllProducts = [
     percent: "50% off",
   },
   {
+    id: 10,
     Image: Img10,
     SaleImg: saleImg,
     reviews: "Audionic Airbud 550",
@@ -108,6 +121,7 @@ const AllProducts = [
     percent: "62% off",
   },
   {
+    id: 11,
     Image: Img11,
     SaleImg: saleImg,
     reviews: "Imiki MT2 Wireless Erbuds",
@@ -116,6 +130,7 @@ const AllProducts = [
     percent: "44% off",
   },
   {
+    id: 12,
     Image: Img12,
     SaleImg: saleImg,
     reviews: "Apple AirPods 4 Active Noise Cancellation",
@@ -125,14 +140,23 @@ const AllProducts = [
   },
 ];
 
+
+
 const FirstSection = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleCardClick = (card) => {
+    dispatch(setSelectedCard(card));
+    navigate(`/card-detail/${card.id}`);
+  };
+
   return (
     <Box className="relative">
       <Box className="w-full mt-7 relative">
         <img
           src={Banner}
-          alt=""
-          srcSet=""
+          alt="Banner"
           className="w-full h-[65vh] object-cover tablet-height"
         />
       </Box>
@@ -145,7 +169,7 @@ const FirstSection = () => {
             </Typography>
             <Button
               variant="contained"
-              className="!bg-white !text-black !font-bold"
+              className="!bg-white !text-black !font-bold hover:!bg-gray-200 transition"
             >
               View All
             </Button>
@@ -154,34 +178,31 @@ const FirstSection = () => {
             <Swiper
               slidesPerView={2}
               spaceBetween={12}
-              grid={{
-                rows: 2,
-                fill: "row",
-              }}
+              grid={{ rows: 2, fill: "row" }}
               grabCursor={true}
               breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                },
-                768: {
-                  slidesPerView: 3,
-                },
-                1024: {
-                  slidesPerView: 4,
-                },
+                640: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
               }}
               modules={[Grid, EffectCreative]}
               className="mySwiper"
             >
               {AllProducts?.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <Card className="shadow-lg shadow-slate-300 relative w-full">
+                  <Card
+                    className="shadow-lg shadow-slate-300 relative w-full transform hover:scale-105 transition-transform"
+                  >
                     <Box className="w-full pt-4">
                       <img
-                        style={{ width: "8rem", height: "auto" }}
                         className="mx-auto object-contain"
                         src={item?.Image}
-                        alt="Main Image"
+                        alt={item?.reviews}
+                        style={{ maxWidth: "8rem", height: "auto" }}
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "fallback-image-url"; // Fallback image if source fails
+                        }}
                       />
                     </Box>
 
@@ -194,16 +215,10 @@ const FirstSection = () => {
                       />
                     </Box>
 
-                    <Box className="flex ms-5">
-                      <Box className="flex items-center bg-orange-100 px-2 rounded-lg w-1/2 mt-0">
-                        <span className="text-yellow-500 text-sm">★</span>
-                        <Typography variant="body2" className="ml-1 font-bold">
-                          4.8 reviews
-                        </Typography>
-                      </Box>
-                    </Box>
-
-                    <Box className="p-4">
+                    <Box
+                      className="p-4 cursor-pointer"
+                      onClick={() => handleCardClick(item)}
+                    >
                       <Typography
                         variant="body2"
                         className="text-sm font-bold truncate my-2"
@@ -211,10 +226,7 @@ const FirstSection = () => {
                         {item?.reviews}
                       </Typography>
 
-                      <Typography
-                        variant="h6"
-                        className="text-lg font-bold text-black"
-                      >
+                      <Typography variant="h6" className="text-lg font-bold text-black">
                         RS {item.price}
                       </Typography>
 

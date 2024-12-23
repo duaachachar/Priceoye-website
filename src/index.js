@@ -13,6 +13,7 @@ import ErrorPage from "./componants/ErrorPage";
 import ProtectedRoute from "./componants/Protected-route/ProtectedRoute";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import CardDetail from "./componants/CardSection/CardDetailPage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/card-detail/:id",
+        element: <CardDetail />,
       },
       {
         path: "/account",

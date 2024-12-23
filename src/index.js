@@ -11,6 +11,8 @@ import EditProfile from "./componants/account/EditProfile";
 import OrderList from "./componants/OrderList";
 import ErrorPage from "./componants/ErrorPage";
 import ProtectedRoute from "./componants/Protected-route/ProtectedRoute";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 const router = createBrowserRouter([
   {
@@ -55,4 +57,8 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={router} />);
+root.render(
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
+);

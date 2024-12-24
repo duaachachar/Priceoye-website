@@ -19,7 +19,10 @@ import { Box} from "@mui/material";
 
 function App() {
   return (
+    <>
+
     <Box className='h-screen bg-gray-100'>
+
       <HeroSection />
       <HeroImages />
      <FirstSection />
@@ -36,6 +39,7 @@ function App() {
       <SubFooter/>
       <Footer/>
     </Box>
+    </>
   );
 }
 

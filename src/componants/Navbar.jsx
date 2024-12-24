@@ -35,25 +35,25 @@ export default function Navbar() {
     const dataItems = localStorage.getItem("user");
     const items = JSON.parse(dataItems) || {};
     setUserData(items);
-  
+
     // Check for query parameter to dynamically update without refresh
     const params = new URLSearchParams(window.location.search);
     if (params.get("loggedIn") === "true" && items.email && items.password) {
       setUserData(items);
     }
   }, [window.location.search]); // Depend on query parameter changes
-  
+
   const handleLogout = () => {
     localStorage.removeItem("user");
     setUserData({});
     alert("You have successfully logged out!");
-  
+
     // Remove query parameter on logout
     const params = new URLSearchParams(window.location.search);
     params.delete("loggedIn");
     navigate(`/register?${params.toString()}`);
   };
-  
+
   const handleLogin = () => {
     // Add query parameter for login
     const params = new URLSearchParams(window.location.search);
@@ -102,55 +102,59 @@ export default function Navbar() {
 
             <Box sx={{ margin: "auto" }} />
 
-           {!userData.email || !userData.password ? (
-  <Hidden smDown>
-    <Button
-      variant="contained"
-      class="bg-white border-2 text-sky-400 border-transparent hover:bg-none hover:border-2 hover:text-white hover:border-white hover:bg-transparent px-6 py-2 rounded mx-3"
-    >
-      <Link to="/login" onClick={handleLogin}>Login</Link>
-    </Button>
+            {!userData.email || !userData.password ? (
+              <Hidden smDown>
+                <Button
+                  variant="contained"
+                  class="bg-white border-2 text-sky-400 border-transparent hover:bg-none hover:border-2 hover:text-white hover:border-white hover:bg-transparent px-6 py-2 rounded mx-3"
+                >
+                  <Link to="/login" onClick={handleLogin}>
+                    Login
+                  </Link>
+                </Button>
 
-    <Button
-      variant="contained"
-      class="bg-transparent border-2 text-white border-white hover:bg-none hover:border-2 hover:text-sky-400 hover:border-transparent hover:bg-white px-6 py-2 rounded"
-    >
-      <Link to="/register" onClick={handleLogin}>Register</Link>
-    </Button>
-  </Hidden>
-) : (
-  <Hidden smDown>
-    <Box className="flex items-center">
-      <AccountCircleIcon
-        fontSize="large"
-        className="text-white ms-3"
-        id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-      />
-      <Typography variant="body1">{userData?.firstName}</Typography>
-    </Box>
-    <Menu
-      id="basic-menu"
-      anchorEl={anchorEl}
-      open={Open}
-      onClose={handleClose}
-      MenuListProps={{
-        "aria-labelledby": "basic-button",
-      }}
-    >
-      <MenuItem onClick={handleClose}>
-        <Link to="/account">My account</Link>
-      </MenuItem>
-      <MenuItem onClick={handleClose}>
-        <Link to="/order-list">Track my Order</Link>
-      </MenuItem>
-      <MenuItem onClick={handleLogout}>Logout</MenuItem>
-    </Menu>
-  </Hidden>
-)}
+                <Button
+                  variant="contained"
+                  class="bg-transparent border-2 text-white border-white hover:bg-none hover:border-2 hover:text-sky-400 hover:border-transparent hover:bg-white px-6 py-2 rounded"
+                >
+                  <Link to="/register" onClick={handleLogin}>
+                    Register
+                  </Link>
+                </Button>
+              </Hidden>
+            ) : (
+              <Hidden smDown>
+                <Box className="flex items-center">
+                  <AccountCircleIcon
+                    fontSize="large"
+                    className="text-white ms-3"
+                    id="basic-button"
+                    aria-controls={open ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? "true" : undefined}
+                    onClick={handleClick}
+                  />
+                  <Typography variant="body1">{userData?.firstName}</Typography>
+                </Box>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={Open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button",
+                  }}
+                >
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/account">My account</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/order-list">Track my Order</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                </Menu>
+              </Hidden>
+            )}
           </Toolbar>
         </AppBar>
       </Box>

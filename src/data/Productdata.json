@@ -1,0 +1,723 @@
+[
+  {
+    "id": 1,
+    "Image": "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-o6fve-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Audionic Airbud 550",
+    "price": 3811,
+    "oldPrice": 9990,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Audionic%20Airbud%20550/10.png",
+      "carouselImages": [
+        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-mkxlj.jpg",
+        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-j6tph.jpg",
+        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-oi8p1.jpg",
+        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-ns5tq.jpg"
+      ],
+      "productName": "Audionic Airbud 550",
+      "price": 3811,
+      "oldPrice": 9999,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "Image": "https://images.priceoye.pk/samsung-galaxy-buds3-pro-pakistan-priceoye-b0lez-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Samsung Galaxy Buds 3 Pro",
+    "price": 48999,
+    "oldPrice":  69999,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://images.priceoye.pk/media/samsung-galaxy-buds3-pro/samsung-galaxy-buds3-pro-d7fvn.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Samsung Galaxy Buds 3 Pro",
+      "price": 48999,
+      "oldPrice":  69999,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "Image": "https://images.priceoye.pk/xiaomi-redmi-buds-6-lite-wireless-earbuds-pakistan-priceoye-6t6de.jpg",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Xiaomi Redmi Buds 6 Lite",
+    "price": 5899,
+    "oldPrice": 6999,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://images.priceoye.pk/media/xiaomi-redmi-buds-6-lite-wireless-earbuds/xiaomi-redmi-buds-6-lite-wireless-earbuds-vu3bc.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Xiaomi Redmi Buds 6 Lite",
+      "price": 5899,
+      "oldPrice": 6999,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "Image": "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-uvlbc-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "QCY T13 ANC 2",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://images.priceoye.pk/media/qcy-t13-anc-2/qcy-t13-anc-2-8mq0l.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "QCY T13 ANC 2",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "Image": "https://images.priceoye.pk/redmi-buds-6-active-wireless-earbuds-pakistan-priceoye-h6kkk-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Redmi Buds 6 Active Wireless Earbuds",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/redmi-buds-6-active-wireless-earbuds/redmi-buds-6-active-wireless-earbuds.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Redmi Buds 6 Active Wireless Earbuds",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "Image": "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-40ifu-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Soundpeats Engine4 Wireless Earbuds",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Soundpeats%20Engine4%20Wireless%20Earbuds/5.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Soundpeats Engine4 Wireless Earbuds",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "Image": "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-csv44-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Anker R50i Earbuds",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Anker%20R50i%20Earbuds/1.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Anker R50i Earbuds",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "Image": "https://images.priceoye.pk/airpods-4-active-noise-cancellation-pakistan-priceoye-uz620-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Apple AirPods 4 Active Noise Cancellation",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://images.priceoye.pk/media/airpods-4-active-noise-cancellation/airpods-4-active-noise-cancellation-ffrsc.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Apple AirPods 4 Active Noise Cancellation",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "Image": "https://images.priceoye.pk/realme-t100-wireless-earbuds-pakistan-priceoye-tq6ud-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Realme T100 Wireless Earbuds",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Realme%20T100%20Wireless%20Earbuds/7.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Realme T100 Wireless Earbuds",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "Image": "https://images.priceoye.pk/imilab-imiki-mt2-wireless-erbuds-pakistan-priceoye-obxhu-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Realme Buds T110",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://images.priceoye.pk/media/imilab-imiki-mt2-wireless-erbuds/imilab-imiki-mt2-wireless-erbuds-wpop4.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Realme Buds T110",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "Image": "https://images.priceoye.pk/realme-buds-t110-pakistan-priceoye-w0l3s-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Imiki MT2 Wireless Erbuds",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Realme%20Buds%20T110/catalog.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Imiki MT2 Wireless Erbuds",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "Image": "https://images.priceoye.pk/nothing-buds-2-pro-pakistan-priceoye-qouw0-270x270.webp",
+    "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
+    "reviews": "Nothing Buds Pro 2",
+    "price": 4549,
+    "oldPrice": 7399,
+    "percent": "30% off",
+    "details": {
+      "highlightImage":"https://priceoye-images.s3-accelerate.amazonaws.com/media/nothing-buds-2-pro/nothing-buds-2-pro.png",
+      "carouselImages": [
+        "/path/to/carousel-image1.jpg",
+        "/path/to/carousel-image2.jpg",
+        "/path/to/carousel-image3.jpg"
+      ],
+      "productName": "Nothing Buds Pro 2",
+      "price": 4549,
+      "oldPrice": 7399,
+      "discount": "30% off",
+      "reviews": [
+        {
+          "user": "Ali Khan",
+          "reviewText": "Excellent sound quality for the price!",
+          "image": "/path/to/review-image1.jpg"
+        },
+        {
+          "user": "Sara Ahmed",
+          "reviewText": "Battery life is impressive and lasts all day.",
+          "image": "/path/to/review-image2.jpg"
+        },
+        {
+          "user": "Zain Malik",
+          "reviewText": "Comfortable to wear and looks premium.",
+          "image": "/path/to/review-image3.jpg"
+        }
+      ],
+      "questionsAndAnswers": [
+        {
+          "question": "What is the battery life?",
+          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+        },
+        {
+          "question": "Are these earbuds water-resistant?",
+          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+        },
+        {
+          "question": "Do these support noise cancellation?",
+          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+        },
+        {
+          "question": "What devices are compatible?",
+          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+        }
+      ],
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "buyNow": "Buy Now"
+      }
+    }
+  }
+]

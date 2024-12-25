@@ -8,12 +8,14 @@
     "oldPrice": 9990,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Audionic%20Airbud%20550/10.png",
+      "highlightImages": [
+        "https://priceoye-images.s3-accelerate.amazonaws.com/media/nothing-buds-2-pro/nothing-buds-2-pro.png"
+      ],
       "carouselImages": [
-        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-mkxlj.jpg",
         "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-j6tph.jpg",
         "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-oi8p1.jpg",
-        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-ns5tq.jpg"
+        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-ns5tq.jpg",
+        "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-7bygj.jpg"
       ],
       "productName": "Audionic Airbud 550",
       "price": 3811,
@@ -38,26 +40,22 @@
       ],
       "questionsAndAnswers": [
         {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+          "question": "Q. How much time in stock",
+          "answer": "We currently do not have vour desired product in stock. Please check back in a few days due to stock availability."
         },
         {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+          "question": "Q. Installment pa mil jeya ga ya askari credit card pa",
+          "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, Please visit our website at : https://priceoye.pk/bnpl"
         },
         {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+          "question": "Q. Ya ear bud kab tak available ho Jay ga",
+          "answer": "Dear Hammad, We currently do not have your desired product in stock. Please check back in a few days due to stock availability."
         },
         {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+          "question": "Q. Audionic earbuds 550 battery timing kitne ha",
+          "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at : https://priceoye.pk or visit its official website."
         }
-      ],
-      "buttons": {
-        "addToCart": "Add to Cart",
-        "buyNow": "Buy Now"
-      }
+      ]
     }
   },
   {
@@ -66,18 +64,20 @@
     "SaleImg": "https://images.priceoye.pk/badges/priceoye-sale-20241212-w3sbv.png",
     "reviews": "Samsung Galaxy Buds 3 Pro",
     "price": 48999,
-    "oldPrice":  69999,
+    "oldPrice": 69999,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://images.priceoye.pk/media/samsung-galaxy-buds3-pro/samsung-galaxy-buds3-pro-d7fvn.png",
+      "highlightImages": [
+        "https://images.priceoye.pk/media/samsung-galaxy-buds3-pro/samsung-galaxy-buds3-pro-d7fvn.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/realme-buds-t110-pakistan-priceoye-hgnfp.jpg",
+        "https://images.priceoye.pk/realme-buds-t110-pakistan-priceoye-x099f.jpg",
+        "https://images.priceoye.pk/realme-buds-t110-pakistan-priceoye-k2091.jpg"
       ],
       "productName": "Samsung Galaxy Buds 3 Pro",
       "price": 48999,
-      "oldPrice":  69999,
+      "oldPrice": 69999,
       "discount": "30% off",
       "reviews": [
         {
@@ -129,11 +129,13 @@
     "oldPrice": 6999,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://images.priceoye.pk/media/xiaomi-redmi-buds-6-lite-wireless-earbuds/xiaomi-redmi-buds-6-lite-wireless-earbuds-vu3bc.png",
+      "highlightImages": [
+        "https://images.priceoye.pk/media/xiaomi-redmi-buds-6-lite-wireless-earbuds/xiaomi-redmi-buds-6-lite-wireless-earbuds-vu3bc.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/xiaomi-redmi-buds-6-lite-pakistan-priceoye-sg9mk.jpg",
+        "https://images.priceoye.pk/xiaomi-redmi-buds-6-lite-wireless-earbuds-pakistan-priceoye-t5p4d.jpg",
+        "https://images.priceoye.pk/xiaomi-redmi-buds-6-lite-wireless-earbuds-pakistan-priceoye-lku24.jpg"
       ],
       "productName": "Xiaomi Redmi Buds 6 Lite",
       "price": 5899,
@@ -158,20 +160,20 @@
       ],
       "questionsAndAnswers": [
         {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+          "question": "Q. Are Samsung Galaxy Buds 3 Pro currently in stock?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+          "question": "Q. Can I buy Samsung Galaxy Buds 3 Pro on installment or with an Askari credit card?",
+          "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
         },
         {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+          "question": "Q. When will Samsung Galaxy Buds 3 Pro be available?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+          "question": "Q. What is the battery timing of Samsung Galaxy Buds 3 Pro?",
+          "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Samsung website."
         }
       ],
       "buttons": {
@@ -189,11 +191,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://images.priceoye.pk/media/qcy-t13-anc-2/qcy-t13-anc-2-8mq0l.png",
+      "highlightImages": [
+        "https://images.priceoye.pk/media/qcy-t13-anc-2/qcy-t13-anc-2-8mq0l.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-f17nb.jpeg",
+        "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-8uns5.jpeg",
+        "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-61el7.jpeg"
       ],
       "productName": "QCY T13 ANC 2",
       "price": 4549,
@@ -218,20 +222,20 @@
       ],
       "questionsAndAnswers": [
         {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+          "question": "Q. Are QCY T13 ANC 2 earbuds currently in stock?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+          "question": "Q. Can I purchase QCY T13 ANC 2 on installment or using an Askari credit card?",
+          "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
         },
         {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+          "question": "Q. When will QCY T13 ANC 2 be available?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+          "question": "Q. What is the battery timing of QCY T13 ANC 2?",
+          "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official QCY website."
         }
       ],
       "buttons": {
@@ -249,11 +253,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/redmi-buds-6-active-wireless-earbuds/redmi-buds-6-active-wireless-earbuds.png",
+      "highlightImages": [
+        "https://priceoye-images.s3-accelerate.amazonaws.com/media/redmi-buds-6-active-wireless-earbuds/redmi-buds-6-active-wireless-earbuds.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/samsung-galaxy-buds3-pro-pakistan-priceoye-y6q9a.jpg",
+        "https://images.priceoye.pk/samsung-galaxy-buds3-pro-pakistan-priceoye-e8zdb.jpg",
+        "https://images.priceoye.pk/samsung-galaxy-buds3-pro-pakistan-priceoye-qzsfh.jpg"
       ],
       "productName": "Redmi Buds 6 Active Wireless Earbuds",
       "price": 4549,
@@ -278,20 +284,20 @@
       ],
       "questionsAndAnswers": [
         {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+          "question": "Q. Are Redmi Buds 6 Active Wireless Earbuds currently in stock?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+          "question": "Q. Can I purchase Redmi Buds 6 Active Wireless Earbuds on installment or using an Askari credit card?",
+          "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
         },
         {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+          "question": "Q. When will Redmi Buds 6 Active Wireless Earbuds be available?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+          "question": "Q. What is the battery timing of Redmi Buds 6 Active Wireless Earbuds?",
+          "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Redmi website."
         }
       ],
       "buttons": {
@@ -309,11 +315,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Soundpeats%20Engine4%20Wireless%20Earbuds/5.png",
+      "highlightImages": [
+        "https://priceoye-images.s3-accelerate.amazonaws.com/media/Audionic%20Airbud%20550/10.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-0swv0.jpg",
+        "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-o9sep.jpg",
+        "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-evhsn.jpg"
       ],
       "productName": "Soundpeats Engine4 Wireless Earbuds",
       "price": 4549,
@@ -338,20 +346,20 @@
       ],
       "questionsAndAnswers": [
         {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+          "question": "Q. Are Soundpeats Engine4 Wireless Earbuds currently in stock?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+          "question": "Q. Can I purchase Soundpeats Engine4 Wireless Earbuds on installment or using an Askari credit card?",
+          "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
         },
         {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+          "question": "Q. When will Soundpeats Engine4 Wireless Earbuds be available?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+          "question": "Q. What is the battery timing of Soundpeats Engine4 Wireless Earbuds?",
+          "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Soundpeats website."
         }
       ],
       "buttons": {
@@ -369,11 +377,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Anker%20R50i%20Earbuds/1.png",
+      "highlightImages": [
+        "https://priceoye-images.s3-accelerate.amazonaws.com/media/Anker%20R50i%20Earbuds/1.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-dxs1v.jpg",
+        "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-ciqu1.jpg",
+        "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-40fx3.jpg"
       ],
       "productName": "Anker R50i Earbuds",
       "price": 4549,
@@ -398,20 +408,20 @@
       ],
       "questionsAndAnswers": [
         {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
+          "question": "Q. Are Anker R50i Earbuds currently available in stock?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
+          "question": "Q. Can I purchase Anker R50i Earbuds on installment or using an Askari credit card?",
+          "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
         },
         {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
+          "question": "Q. When will Anker R50i Earbuds be available?",
+          "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
         },
         {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
+          "question": "Q. What is the battery life of Anker R50i Earbuds?",
+          "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Anker website."
         }
       ],
       "buttons": {
@@ -429,11 +439,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://images.priceoye.pk/media/airpods-4-active-noise-cancellation/airpods-4-active-noise-cancellation-ffrsc.png",
+      "highlightImages": [
+        "https://images.priceoye.pk/media/airpods-4-active-noise-cancellation/airpods-4-active-noise-cancellation-ffrsc.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/airpods-4-active-noise-cancellation-pakistan-priceoye-p4fby.jpeg",
+        "https://images.priceoye.pk/airpods-4-active-noise-cancellation-pakistan-priceoye-csrjj.jpeg",
+        "https://images.priceoye.pk/airpods-4-active-noise-cancellation-pakistan-priceoye-lug02.jpeg"
       ],
       "productName": "Apple AirPods 4 Active Noise Cancellation",
       "price": 4549,
@@ -456,24 +468,25 @@
           "image": "/path/to/review-image3.jpg"
         }
       ],
-      "questionsAndAnswers": [
-        {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
-        },
-        {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
-        },
-        {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
-        },
-        {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
-        }
-      ],
+     "questionsAndAnswers": [
+    {
+        "question": "Q. Are Apple AirPods 4 Active Noise Cancellation earbuds currently available in stock?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
+    },
+    {
+        "question": "Q. Can I purchase Apple AirPods 4 Active Noise Cancellation on installment or using an Askari credit card?",
+        "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
+    },
+    {
+        "question": "Q. When will Apple AirPods 4 Active Noise Cancellation earbuds be available?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
+    },
+    {
+        "question": "Q. Does Apple AirPods 4 Active Noise Cancellation support long battery life?",
+        "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Apple website."
+    }
+]
+,
       "buttons": {
         "addToCart": "Add to Cart",
         "buyNow": "Buy Now"
@@ -489,11 +502,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Realme%20T100%20Wireless%20Earbuds/7.png",
+      "highlightImages": [
+        "https://priceoye-images.s3-accelerate.amazonaws.com/media/Realme%20T100%20Wireless%20Earbuds/7.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/realme-t100-wireless-earbuds-pakistan-priceoye-fssvw.jpg",
+        "https://images.priceoye.pk/realme-t100-wireless-earbuds-pakistan-priceoye-cp42j.jpg",
+        "https://images.priceoye.pk/realme-t100-wireless-earbuds-pakistan-priceoye-uwfi0.jpg"
       ],
       "productName": "Realme T100 Wireless Earbuds",
       "price": 4549,
@@ -517,23 +532,24 @@
         }
       ],
       "questionsAndAnswers": [
-        {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
-        },
-        {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
-        },
-        {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
-        },
-        {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
-        }
-      ],
+    {
+        "question": "Q. Are Realme T100 Wireless Earbuds currently available in stock?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
+    },
+    {
+        "question": "Q. Can I purchase Realme T100 Wireless Earbuds on installment or using an Askari credit card?",
+        "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
+    },
+    {
+        "question": "Q. When will Realme T100 Wireless Earbuds be available?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
+    },
+    {
+        "question": "Q. What is the battery life and sound quality of Realme T100 Wireless Earbuds?",
+        "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Realme website."
+    }
+]
+,
       "buttons": {
         "addToCart": "Add to Cart",
         "buyNow": "Buy Now"
@@ -549,11 +565,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://images.priceoye.pk/media/imilab-imiki-mt2-wireless-erbuds/imilab-imiki-mt2-wireless-erbuds-wpop4.png",
+      "highlightImages": [
+        "https://images.priceoye.pk/media/imilab-imiki-mt2-wireless-erbuds/imilab-imiki-mt2-wireless-erbuds-wpop4.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/imilab-imiki-mt2-wireless-erbuds-pakistan-priceoye-u7nni.jpg",
+        "https://images.priceoye.pk/imilab-imiki-mt2-wireless-erbuds-pakistan-priceoye-hpuik.jpg",
+        "https://images.priceoye.pk/imilab-imiki-mt2-wireless-erbuds-pakistan-priceoye-9ruh2.jpg"
       ],
       "productName": "Realme Buds T110",
       "price": 4549,
@@ -577,23 +595,24 @@
         }
       ],
       "questionsAndAnswers": [
-        {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
-        },
-        {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
-        },
-        {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
-        },
-        {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
-        }
-      ],
+    {
+        "question": "Q. Are Realme Buds T110 currently available in stock?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
+    },
+    {
+        "question": "Q. Can I purchase Realme Buds T110 on installment or using an Askari credit card?",
+        "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
+    },
+    {
+        "question": "Q. When will Realme Buds T110 be back in stock?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for updates on stock availability."
+    },
+    {
+        "question": "Q. What is the battery life and sound quality of Realme Buds T110?",
+        "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Realme website."
+    }
+]
+,
       "buttons": {
         "addToCart": "Add to Cart",
         "buyNow": "Buy Now"
@@ -609,11 +628,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage": "https://priceoye-images.s3-accelerate.amazonaws.com/media/Realme%20Buds%20T110/catalog.png",
+      "highlightImages": [
+        "https://priceoye-images.s3-accelerate.amazonaws.com/media/Realme%20Buds%20T110/catalog.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/realme-buds-t110-pakistan-priceoye-hgnfp.jpg",
+        "https://images.priceoye.pk/realme-buds-t110-pakistan-priceoye-x099f.jpg",
+        "https://images.priceoye.pk/realme-buds-t110-pakistan-priceoye-k2091.jpg"
       ],
       "productName": "Imiki MT2 Wireless Erbuds",
       "price": 4549,
@@ -637,23 +658,24 @@
         }
       ],
       "questionsAndAnswers": [
-        {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
-        },
-        {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
-        },
-        {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
-        },
-        {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
-        }
-      ],
+    {
+        "question": "Q. Are Imiki MT2 Wireless Earbuds currently available in stock?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
+    },
+    {
+        "question": "Q. Can I purchase Imiki MT2 Wireless Earbuds on installment or using an Askari credit card?",
+        "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
+    },
+    {
+        "question": "Q. When will Imiki MT2 Wireless Earbuds be available?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for updates on stock availability."
+    },
+    {
+        "question": "Q. What is the battery life and sound quality of Imiki MT2 Wireless Earbuds?",
+        "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Imiki website."
+    }
+]
+,
       "buttons": {
         "addToCart": "Add to Cart",
         "buyNow": "Buy Now"
@@ -669,11 +691,13 @@
     "oldPrice": 7399,
     "percent": "30% off",
     "details": {
-      "highlightImage":"https://priceoye-images.s3-accelerate.amazonaws.com/media/nothing-buds-2-pro/nothing-buds-2-pro.png",
+      "highlightImages": [
+        "https://priceoye-images.s3-accelerate.amazonaws.com/media/nothing-buds-2-pro/nothing-buds-2-pro.png"
+      ],
       "carouselImages": [
-        "/path/to/carousel-image1.jpg",
-        "/path/to/carousel-image2.jpg",
-        "/path/to/carousel-image3.jpg"
+        "https://images.priceoye.pk/nothing-buds-2-pro-pakistan-priceoye-9mcqy.jpg",
+        "https://images.priceoye.pk/nothing-buds-2-pro-pakistan-priceoye-kt8p0.jpg",
+        "https://images.priceoye.pk/nothing-buds-2-pro-pakistan-priceoye-r1d9k.jpg"
       ],
       "productName": "Nothing Buds Pro 2",
       "price": 4549,
@@ -697,23 +721,24 @@
         }
       ],
       "questionsAndAnswers": [
-        {
-          "question": "What is the battery life?",
-          "answer": "The earbuds provide up to 20 hours of playback time with the charging case."
-        },
-        {
-          "question": "Are these earbuds water-resistant?",
-          "answer": "Yes, the earbuds have an IPX4 rating, making them resistant to water splashes."
-        },
-        {
-          "question": "Do these support noise cancellation?",
-          "answer": "Yes, these earbuds come with passive noise isolation for enhanced audio."
-        },
-        {
-          "question": "What devices are compatible?",
-          "answer": "These earbuds are compatible with iOS, Android, and Windows devices."
-        }
-      ],
+    {
+        "question": "Q. Are Nothing Buds Pro 2 currently available in stock?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for stock availability."
+    },
+    {
+        "question": "Q. Can I purchase Nothing Buds Pro 2 on installment or using an Askari credit card?",
+        "answer": "Installment plans for each of our products are explained on our website. To check the installment plan for your desired product, please visit our website at: https://priceoye.pk/bnpl"
+    },
+    {
+        "question": "Q. When will Nothing Buds Pro 2 be available again?",
+        "answer": "We currently do not have your desired product in stock. Please check back in a few days for updates on stock availability."
+    },
+    {
+        "question": "Q. What is the battery life and sound quality of Nothing Buds Pro 2?",
+        "answer": "For price, specifications, availability, and other details regarding your desired product, please visit our website at: https://priceoye.pk or visit the official Nothing website."
+    }
+]
+,
       "buttons": {
         "addToCart": "Add to Cart",
         "buyNow": "Buy Now"

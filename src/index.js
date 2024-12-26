@@ -12,6 +12,7 @@ import OrderList from "./componants/OrderList";
 import ErrorPage from "./componants/ErrorPage";
 import ProtectedRoute from "./componants/Protected-route/ProtectedRoute";
 import CardDetail from "./componants/CardSection/CardDetailPage";
+import DeliveryPage from "./componants/CardSection/Delivery/DeliveryPage";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/card-detail/:id",
         element: <CardDetail />,
+      },
+      {
+        path: "/delivery-page",
+        element: <DeliveryPage />,
       },
       {
         path: "/account",

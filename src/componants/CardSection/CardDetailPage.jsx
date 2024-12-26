@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   Box,
   Typography,
@@ -169,7 +169,7 @@ const CardDetailPage = () => {
 
             <div className="flex items-center space-x-5">
               <Button variant="contained" className="!bg-yellow-600 w-1/3">
-                Add To Cart
+               <Link to='/delivery-page'> Add To Cart</Link>
               </Button>
               <Button variant="contained" className="!bg-sky-600 w-1/3">
                 Compare

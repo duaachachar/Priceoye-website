@@ -149,7 +149,7 @@ export default function Navbar() {
                     <Link to="/account">My account</Link>
                   </MenuItem>
                   <MenuItem onClick={handleClose}>
-                    <Link to="/order-list">Track my Order</Link>
+                    <Link to="/track-order">Track my Order</Link>
                   </MenuItem>
                   <MenuItem onClick={handleLogout}>Logout</MenuItem>
                 </Menu>

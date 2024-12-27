@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   Box,
   Typography,
@@ -21,13 +21,23 @@ import Img2 from "../../assets/2.svg";
 import Img3 from "../../assets/3.svg";
 import Img4 from "../../assets/4.svg";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useDispatch } from "react-redux";
+import { setSelectedItem } from "./cartSlice";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { Navigation, Thumbs } from "swiper/modules";
 
 const CardDetailPage = () => {
   const [expanded, setExpanded] = React.useState(false);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const navigate = useNavigate();
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
+  const dispatch = useDispatch();
   const { id } = useParams();
   const card = productData.find((item) => item.id === parseInt(id));
 
@@ -35,32 +45,60 @@ const CardDetailPage = () => {
     return <Typography variant="h6">Card not found</Typography>;
   }
 
+  const handleAddToCart = () => {
+    dispatch(setSelectedItem(card));
+    navigate("/delivery-page");
+  };
+
   return (
     <Box>
       <Box className="container mx-auto p-5">
         <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
-          {/* Image Section */}
           <Box>
-            <div className="flex flex-col justify-center items-center border-2 border-gray-300 bg-transparent w-4/5 h-auto rounded-lg">
-              <img
-                src={card.Image}
-                alt={card.reviews}
-                className="h-full w-full object-contain rounded-md"
-              />
-            </div>
-            <div className="flex ml-12 space-x-4 my-5">
-              {card?.details?.carouselImages?.map((image, index) => (
-                <div
-                  key={index}
-                  className="w-20 h-20 bg-gray-100 rounded-md flex items-center justify-center border-2 border-gray-300"
+            <div className="flex flex-col items-center">
+              <div className="flex flex-col justify-center items-center border-2 border-gray-300 bg-transparent w-4/5 h-auto rounded-lg">
+                <Swiper
+                  spaceBetween={10}
+                  navigation={true}
+                  thumbs={{ swiper: thumbsSwiper }}
+                  modules={[Navigation, Thumbs]}
+                  className="w-full h-full rounded-md"
                 >
-                  <img
-                    src={image}
-                    alt={`Carousel Image ${index + 1}`}
-                    className="h-full w-full object-cover rounded-md"
-                  />
-                </div>
-              ))}
+                  {card?.details?.carouselImages?.map((image, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        src={image}
+                        alt={`Carousel Image ${index + 1}`}
+                        className="h-full w-full object-contain rounded-md"
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+              <Swiper
+  onSwiper={setThumbsSwiper}
+  spaceBetween={10}
+  slidesPerView={6}
+  freeMode={true}
+  watchSlidesProgress={true}
+  modules={[Thumbs]}
+  className="flex mt-5 w-4/5" 
+  style={{ marginLeft: "100px" }} // Add left margin
+>
+  {card?.details?.carouselImages?.map((image, index) => (
+    <SwiperSlide
+      key={index}
+      className="w-5 h-5 bg-gray-100 rounded-md flex items-center justify-center border-2 border-gray-300"
+    >
+      <img
+        src={image}
+        alt={`Thumbnail ${index + 1}`}
+        className="h-full w-full object-cover rounded-md"
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
+
             </div>
           </Box>
 
@@ -168,8 +206,12 @@ const CardDetailPage = () => {
             </div>
 
             <div className="flex items-center space-x-5">
-              <Button variant="contained" className="!bg-yellow-600 w-1/3">
-               <Link to='/delivery-page'> Add To Cart</Link>
+              <Button
+                variant="contained"
+                className="!bg-yellow-600 w-1/3"
+                onClick={handleAddToCart}
+              >
+                <Link to="/delivery-page"> Add To Cart</Link>
               </Button>
               <Button variant="contained" className="!bg-sky-600 w-1/3">
                 Compare
@@ -307,9 +349,11 @@ const CardDetailPage = () => {
       <Box className="container mx-auto">
         <Typography variant="h6">Ask a question</Typography>
         <TextField fullWidth multiline rows={4} />
-       <Box  className="mt-4">
-       <Button variant="contained" className="!bg-sky-500">Ask Question</Button>
-       </Box>
+        <Box className="mt-4">
+          <Button variant="contained" className="!bg-sky-500">
+            Ask Question
+          </Button>
+        </Box>
       </Box>
       <Footer />
     </Box>

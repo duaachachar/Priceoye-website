@@ -8,11 +8,13 @@ import Register from "./componants/auth/Register";
 import Login from "./componants/auth/Login";
 import MyAccount from "./componants/account/MyAccount";
 import EditProfile from "./componants/account/EditProfile";
-import OrderList from "./componants/OrderList";
 import ErrorPage from "./componants/ErrorPage";
 import ProtectedRoute from "./componants/Protected-route/ProtectedRoute";
 import CardDetail from "./componants/CardSection/CardDetailPage";
 import DeliveryPage from "./componants/CardSection/Delivery/DeliveryPage";
+import { Provider } from 'react-redux';
+import store from './store';
+import TrackOrderList from "./componants/CardSection/TrackOrderList";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
         element: <DeliveryPage />,
       },
       {
+        path: "/track-order",
+        element: <TrackOrderList />,
+      },
+      {
         path: "/account",
         element: (
           <ProtectedRoute>
@@ -55,10 +61,6 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      {
-        path: "/order-list",
-        element: <OrderList />,
-      },
     ],
     errorElement: <ErrorPage />,
   },
@@ -66,6 +68,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-
+  <Provider store={store}>
     <RouterProvider router={router} />
+    </Provider>
 )

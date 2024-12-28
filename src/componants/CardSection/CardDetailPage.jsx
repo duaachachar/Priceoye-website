@@ -76,29 +76,28 @@ const CardDetailPage = () => {
                 </Swiper>
               </div>
               <Swiper
-  onSwiper={setThumbsSwiper}
-  spaceBetween={10}
-  slidesPerView={6}
-  freeMode={true}
-  watchSlidesProgress={true}
-  modules={[Thumbs]}
-  className="flex mt-5 w-4/5" 
-  style={{ marginLeft: "100px" }} // Add left margin
->
-  {card?.details?.carouselImages?.map((image, index) => (
-    <SwiperSlide
-      key={index}
-      className="w-5 h-5 bg-gray-100 rounded-md flex items-center justify-center border-2 border-gray-300"
-    >
-      <img
-        src={image}
-        alt={`Thumbnail ${index + 1}`}
-        className="h-full w-full object-cover rounded-md"
-      />
-    </SwiperSlide>
-  ))}
-</Swiper>
-
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={6}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[Thumbs]}
+                className="flex mt-5 w-4/5"
+                style={{ marginLeft: "100px" }}
+              >
+                {card?.details?.carouselImages?.map((image, index) => (
+                  <SwiperSlide
+                    key={index}
+                    className="w-5 h-5 bg-gray-100 rounded-md flex items-center justify-center border-2 border-gray-300"
+                  >
+                    <img
+                      src={image}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="h-full w-full object-cover rounded-md"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </Box>
 

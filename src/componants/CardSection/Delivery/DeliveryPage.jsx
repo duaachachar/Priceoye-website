@@ -9,17 +9,21 @@ import {
   TextField,
   IconButton,
   Grid,
+  Modal,
 } from "@mui/material";
 import estimate from "../../../assets/estimate-icon.svg";
 import { Radio } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import { addProducts } from "./ProductSlice";
+import { useNavigate } from "react-router-dom";
 
 const steps = ["OTP Verification", "Contact Info", "Delivery", "Payment"];
 
 const DeliveryPage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [openModal, setOpenModal] = useState(false);
   const [userData, setUserData] = useState({});
   const [isEditingContact, setIsEditingContact] = useState(false);
   const [isEditingAddress, setIsEditingAddress] = useState(false);
@@ -64,15 +68,25 @@ const DeliveryPage = () => {
   const selectedItem = useSelector((state) => state.cart.selectedItem);
   console.log(selectedItem, "selectedItem");
 
-  if (!selectedItem) {
-    return <p>No item selected. Please go back and choose an item.</p>;
-  }
-
-
   const activeStep = 3;
+
+  const handleCheckout = () => {
+    if (!selectedPaymentMethod) {
+      alert("Please select a payment method before proceeding to checkout.");
+    } else {
+      // Dispatch product to track order list or any other action
+      dispatch(addProducts(selectedItem));
+      setOpenModal(true); // Open success modal
+    }
+  };
+
+  const handleNavigateToTrackOrder = () => {
+    setOpenModal(false); // Close modal
+    navigate("/track-order"); // Navigate to the track order page
+  };
+
   return (
     <Box className="container mx-auto mt-5">
-     
       <Box className="grid grid-cols-12 gap-4">
         <Box className="col-span-12 md:col-span-9">
           <Stepper activeStep={activeStep} className="my-6">
@@ -288,102 +302,118 @@ const DeliveryPage = () => {
 
           {/* Display Payment Methods if "Standard Shipping" is selected */}
           {selectedDeliveryType === "Standard Shipping" && (
-            <Box className="bg-white p-4 my-3">
-              <Box className="flex justify-between my-3">
-                <Typography variant="body2" className="font-bold">
-                  4. Choose Payment Method
-                </Typography>
-              </Box>
-              <Box className="flex items-center  p-2">
-                <Box className="flex items-center justify-center w-10 h-10 bg-white  mr-4">
-                  <img
-                    src="https://priceoye.pk/assets/images/cod-icon.svg"
-                    alt=""
-                  />
-                </Box>
-                <Box className="flex-grow">
-                  <p className="text-gray-700">Bank Transfer</p>
-                </Box>
-                <Radio
-                  className="text-orange-500"
-                  checked={selectedPaymentMethod === "Bank Transfer"}
-                  onChange={() => handlePaymentMethodChange("Bank Transfer")}
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgb(249 115 22)", // Tailwind's orange-500 color
-                    },
-                  }}
-                />
-              </Box>
-              <Box className="flex items-center  p-2">
-                <Box className="flex items-center justify-center w-10 h-10 bg-white  mr-4">
-                  <img
-                    src="https://priceoye.pk/assets/images/cod-icon.svg"
-                    alt=""
-                  />
-                </Box>
-                <Box className="flex-grow">
-                  <p className="text-gray-700">Cash on Delivery</p>
-                </Box>
-                <Radio
-                  className="text-orange-500"
-                  checked={selectedPaymentMethod === "Cash on Delivery"}
-                  onChange={() => handlePaymentMethodChange("Cash on Delivery")}
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgb(249 115 22)", // Tailwind's orange-500 color
-                    },
-                  }}
-                />
-              </Box>
-              <Box className="flex items-center  p-2">
-                <Box className="flex items-center justify-center w-10 h-10 bg-white  mr-4">
-                  <img
-                    src="https://priceoye.pk/assets/images/cod-icon.svg"
-                    alt=""
-                  />
-                </Box>
-                <Box className="flex-grow">
-                  <p className="text-gray-700">JazzCash</p>
-                </Box>
-                <Radio
-                  className="text-orange-500"
-                  checked={selectedPaymentMethod === "JazzCash"}
-                  onChange={() => handlePaymentMethodChange("JazzCash")}
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgb(249 115 22)",
-                    },
-                  }}
-                />
-              </Box>
-              <Box className="flex items-center  p-2">
-                <Box className="flex items-center justify-center w-10 h-10 bg-white  mr-4">
-                  <img
-                    src="https://priceoye.pk/assets/images/credit-icon.svg"
-                    alt=""
-                  />
-                </Box>
-                <Box className="flex-grow">
-                  <p className="text-gray-700">Credit / Debit Card</p>
-                </Box>
-                <Radio
-                  className="text-orange-500"
-                  checked={selectedPaymentMethod === "Credit / Debit Card"}
-                  onChange={() =>
-                    handlePaymentMethodChange("Credit / Debit Card")
-                  }
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgb(249 115 22)",
-                    },
-                  }}
-                />
-              </Box>
-              <Button variant="contained"  onClick={() => dispatch(addProducts(selectedItem))}>
-                Checkout
-              </Button>
-            </Box>
+         <Box className="bg-white p-4 my-3">
+         <Box className="flex justify-between my-3">
+           <Typography
+             variant="body2"
+             className="font-bold text-[18px] text-[#333] font-[Poppins]"
+           >
+             4. Choose Payment Method
+           </Typography>
+         </Box>
+       
+         {[
+           "Bank Transfer",
+           "Cash on Delivery",
+           "JazzCash",
+           "Credit / Debit Card",
+         ].map((method, index) => (
+           <Box key={index} className="p-2">
+             <Box className="flex items-center">
+               <Box className="flex items-center justify-center w-10 h-10 bg-white mr-4 border-2 border-[#eee] rounded-full shadow-md">
+                 <img
+                   src={
+                     method === "Credit / Debit Card"
+                       ? "https://priceoye.pk/assets/images/credit-icon.svg"
+                       : method === "JazzCash"
+                       ? "https://priceoye.pk/assets/images/cod-icon.svg"
+                       : "https://priceoye.pk/assets/images/bank-icon.svg"
+                   }
+                   alt={method}
+                 />
+               </Box>
+               <Box className="flex-grow">
+                 <p className="text-gray-700 font-[Roboto] text-[#555]">{method}</p>
+               </Box>
+               <Radio
+                 className="text-orange-500"
+                 checked={selectedPaymentMethod === method}
+                 onChange={() => handlePaymentMethodChange(method)}
+                 sx={{
+                   "&.Mui-checked": {
+                     color: "rgb(249 115 22)",
+                   },
+                 }}
+               />
+             </Box>
+           </Box>
+         ))}
+       
+         <Button
+           variant="contained"
+           onClick={handleCheckout}
+           className="bg-[#4caf50] text-white font-[Poppins] text-[16px] px-5 py-2 rounded-lg shadow-md"
+         >
+           Checkout
+         </Button>
+       
+         {/* Success Modal */}
+         <Modal
+           open={openModal}
+           onClose={() => setOpenModal(false)}
+           aria-labelledby="success-modal-title"
+           aria-describedby="success-modal-description"
+         >
+           <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[450px] bg-gradient-to-r from-[#f7faff] to-[#e0f7fa] rounded-lg p-10 shadow-lg text-center">
+             {/* Animated Tick */}
+             <Box className="flex items-center justify-center w-[100px] h-[100px] mx-auto bg-gradient-to-r from-[#e0f7fa] to-[#b2ebf2] rounded-full shadow-md mb-4">
+               <svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 52 52"
+                 className="w-[60%] h-[60%]"
+               >
+                 <circle
+                   cx="26"
+                   cy="26"
+                   r="25"
+                   fill="none"
+                   stroke="#4caf50"
+                   strokeWidth="3"
+                   className="circle"
+                 />
+                 <path
+                   fill="none"
+                   stroke="#4caf50"
+                   strokeWidth="4"
+                   d="M16 26l8 8 14-14"
+                   className="tick"
+                 />
+               </svg>
+             </Box>
+             <Typography
+               id="success-modal-title"
+               variant="h5"
+               className="font-[Poppins] text-[20px] text-[#333] mb-2"
+             >
+               🎉 Order Placed Successfully!
+             </Typography>
+             <Typography
+               id="success-modal-description"
+               className="font-[Roboto] text-[16px] text-[#555] mb-5"
+             >
+               Your product has been added to the track order list.
+             </Typography>
+             <Button
+               variant="contained"
+               onClick={handleNavigateToTrackOrder}
+               className="bg-green-300 text-white px-6 py-3 rounded-lg font-[Poppins] text-[16px] shadow-md"
+             >
+               Go to Track Order
+             </Button>
+           </Box>
+         </Modal>
+       </Box>
+       
           )}
         </Box>
 
@@ -402,7 +432,7 @@ const DeliveryPage = () => {
           </Typography>
           <Box className="bg-white p-4 my-4 ">
             <Box className="flex border-2 border-gray-100 p-2">
-              <Box className="w-/3  mb-5">
+              <Box className="w-1/3  mb-5 border-2 border-gray-200 self-start">
                 <img src={selectedItem?.Image} alt="" srcset="" />
               </Box>
               <Box className="pb-5 ms-4">

@@ -5,55 +5,49 @@ export const productSlice = createSlice({
   initialState: {
     items: [],
     isToast: false,
-    IsProductAdd : false,
+    IsProductAdd: false,
   },
   reducers: {
     addProducts: (state, actions) => {
-      const isExist = state.items.find(
-        (item) => item.id === actions.payload.id
-      );
+      const isExist = state.items.find((item) => item.id === actions.payload.id);
       if (isExist) {
-        state.isToast = true;
+        state.isToast = true; // Show toast if product already exists
       } else {
         state.isToast = false;
         state.IsProductAdd = true;
-        const stateMan = state.items.push({ ...actions.payload, quantity: 1 });
-        console.log(stateMan, "stateMan");
+        // Add new item with initial quantity of 1 and calculate totalPrice
+        const newItem = {
+          ...actions.payload,
+          quantity: 1,
+          totalPrice: actions.payload.price * 1, // Calculate initial total price
+        };
+        state.items.push(newItem);
       }
     },
     increaseQuantity: (state, actions) => {
-      const product = state.items.find(
-        (item) => item.id === actions.payload.id
-      );
+      const product = state.items.find((item) => item.id === actions.payload.id);
       if (product) {
         product.quantity += 1;
+        // Update total price based on the new quantity
+        product.totalPrice = product.price * product.quantity;
       }
       console.log(product, "product");
     },
     decreaseQuantity: (state, actions) => {
-      const product = state.items.find(
-        (item) => item.id === actions.payload.id
-      );
+      const product = state.items.find((item) => item.id === actions.payload.id);
       if (product && product.quantity > 1) {
         product.quantity -= 1;
+        // Update total price based on the new quantity
+        product.totalPrice = product.price * product.quantity;
       } else {
-        state.items = state.items.filter(
-          (item) => item.id !== actions.payload.id
-        );
+        // If quantity is 1 and the user decrements, remove the item from the cart
+        state.items = state.items.filter((item) => item.id !== actions.payload.id);
       }
     },
 
     removeItems: (state, actions) => {
-      const product = state.items.find(
-        (item) => item.id === actions.payload.id
-      );
-      if (product && product.quantity > 1) {
-        product.quantity -= 1;
-      } else {
-        state.items = state.items.filter(
-          (item) => item.id !== actions.payload.id
-        );
-      }
+      // Remove item from the state
+      state.items = state.items.filter((item) => item.id !== actions.payload.id);
     },
   },
 });

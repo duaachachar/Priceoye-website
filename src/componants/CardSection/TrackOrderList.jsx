@@ -16,26 +16,24 @@ import {
   increaseQuantity,
   removeItems,
 } from "./Delivery/ProductSlice";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
-import DeleteIcon from "@mui/icons-material/Delete";
-
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import Footer from "../Footer";
+import StarIcon from "@mui/icons-material/Star";
 
 const TrackOrderList = () => {
   const dispatch = useDispatch();
 
   const { items } = useSelector((state) => state.products);
-  console.log(items, "items");
 
+  // Calculate total price for all items
   const totalPrice =
     items.length &&
-    items.reduce((sum, curr) => sum + curr.price * curr.quantity, 0);
-  console.log(totalPrice);
+    items.reduce((sum, curr) => sum + curr.totalPrice, 0); // Use totalPrice per item here
 
   return (
     <Box className="h-screen bg-gray-100">
-      <Box className="container flex pt-12 space-x-5">
-       
+      <Box className="container flex pt-12 space-x-5 mb-12">
         <Box className="w-1/4 bg-white p-4 shadow-lg shadow-gray-200 self-start">
           <List>Current Orders</List>
           <List>Pending Orders</List>
@@ -44,9 +42,7 @@ const TrackOrderList = () => {
           <List>Refund Orders</List>
         </Box>
 
- 
         <Box className="w-full">
-    
           <Box className="flex items-center p-3 bg-white shadow-lg shadow-gray-300">
             <ArrowBackIosIcon />
             <Link to="/account">
@@ -54,12 +50,11 @@ const TrackOrderList = () => {
             </Link>
           </Box>
 
-        
           <Box
-            className="bg-white w-full mt-2"
+            className="bg-white w-full mt-2 overflow-y-auto"
             style={{
-              height: "400px", 
-              padding: "0", 
+              height: "400px", // Container ki maximum height
+              padding: "0",
             }}
           >
             {!items?.length ? (
@@ -71,47 +66,61 @@ const TrackOrderList = () => {
               </Box>
             ) : (
               items?.map((itemList) => {
-                console.log(items, "items");
-
                 return (
-                  <Box className='p-4'>
-                  
-                    <Box
-                      key={itemList.id}
-                      className="flex justify-around items-center my-3 border py-2 w-full p-4"
-                    >
-                      <img
-                        width={"40px"}
-                        src={itemList?.Image}
-                        alt="card image"
-                      />
-                      <span>{itemList?.category}</span>
+                  <Box className="p-4" key={itemList.id}>
+                    <Box className="flex justify-between items-center border py-2 px-4 bg-gradient-to-r from-blue-400 via-teal-300 to-indigo-400 rounded-lg shadow-md border-gray-300 hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                      {/* Product Image and Reviews */}
+                      <Box className="flex items-center space-x-4">
+                        <img
+                          width={"70px"}
+                          src={itemList?.Image}
+                          className="rounded-full border-2 border-blue-200 shadow-sm"
+                          alt="Product Image"
+                        />
+                        <Box>
+                          <span className="text-gray-800 font-medium flex items-center">
+                            <StarIcon className="text-yellow-400 mr-1" />
+                            {itemList?.reviews} Reviews
+                          </span>
+                        </Box>
+                      </Box>
+
+                      {/* Quantity Controls */}
                       <ButtonGroup
                         size="small"
-                        variant="text"
-                        aria-label="Basic button group"
+                        variant="outlined"
+                        aria-label="Quantity Controls"
                       >
-                        <Button>
-                          <RemoveIcon
-                            className="text-success"
-                            onClick={() => dispatch(decreaseQuantity(itemList))}
-                          />
+                        <Button
+                          className="hover:bg-red-100 text-gray-700 hover:text-red-500 transition-colors duration-200"
+                          onClick={() => dispatch(decreaseQuantity(itemList))}
+                        >
+                          <RemoveCircleOutlineIcon />
                         </Button>
-                        <Button>{itemList?.quantity}</Button>
-                        <Button>
-                          <AddIcon
-                            className="text-success"
-                            onClick={() => dispatch(increaseQuantity(itemList))}
-                          />
+                        <Button className="text-gray-800 font-semibold bg-gray-50">
+                          {itemList?.quantity}
+                        </Button>
+                        <Button
+                          className="hover:bg-green-100 text-gray-700 hover:text-green-500 transition-colors duration-200"
+                          onClick={() => dispatch(increaseQuantity(itemList))}
+                        >
+                          <AddCircleOutlineIcon />
                         </Button>
                       </ButtonGroup>
-                      <span>{itemList?.price}</span>
-                      <Tooltip title={"Remove Item"}>
-                        <Button>
-                          <DeleteIcon
-                            className="text-success"
-                            onClick={() => dispatch(removeItems(itemList))}
-                          />
+
+                      {/* Price */}
+                      <span className="text-lg font-semibold text-gray-800 bg-yellow-100 px-3 py-1 rounded-md shadow-sm">
+                        ${itemList?.totalPrice.toFixed(2)} {/* Use totalPrice here */}
+                      </span>
+
+                      {/* Remove Button */}
+                      <Tooltip title="Remove Item">
+                        <Button
+                          variant="contained"
+                          className="bg-gradient-to-r from-red-400 to-red-500 hover:from-red-500 hover:to-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition-transform duration-200 hover:scale-105"
+                          onClick={() => dispatch(removeItems(itemList))}
+                        >
+                          Remove
                         </Button>
                       </Tooltip>
                     </Box>
@@ -120,8 +129,29 @@ const TrackOrderList = () => {
               })
             )}
           </Box>
+
+          {/* Total Price of all items */}
+          {items.length > 0 && (
+            <Box className="bg-gradient-to-r from-indigo-100 via-blue-100 to-teal-100 p-6 mt-6 rounded-lg shadow-lg border border-gray-300">
+              <Box className="flex justify-between items-center">
+                <Typography
+                  variant="h6"
+                  className="font-semibold text-gray-800 tracking-wide font-sans"
+                >
+                  Total Price of All Items:
+                </Typography>
+                <Typography
+                  variant="h6"
+                  className="font-bold text-xl text-gray-900 font-sans"
+                >
+                  ${totalPrice.toFixed(2)} {/* Display total price correctly */}
+                </Typography>
+              </Box>
+            </Box>
+          )}
         </Box>
       </Box>
+      <Footer />
     </Box>
   );
 };

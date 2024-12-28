@@ -39,11 +39,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/delivery-page",
-        element: <DeliveryPage />,
+        element: (
+          <ProtectedRoute>
+            <DeliveryPage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/track-order",
-        element: <TrackOrderList />,
+        element: (
+          <ProtectedRoute>
+            <TrackOrderList />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/account",

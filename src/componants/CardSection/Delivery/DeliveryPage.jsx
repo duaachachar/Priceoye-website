@@ -15,7 +15,7 @@ import estimate from "../../../assets/estimate-icon.svg";
 import { Radio } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
-import { addProducts } from "./ProductSlice";
+import { addProducts, increaseQuantity } from "./ProductSlice";
 import { useNavigate } from "react-router-dom";
 
 const steps = ["OTP Verification", "Contact Info", "Delivery", "Payment"];
@@ -76,6 +76,7 @@ const DeliveryPage = () => {
     } else {
       // Dispatch product to track order list or any other action
       dispatch(addProducts(selectedItem));
+      dispatch(increaseQuantity(selectedItem))
       setOpenModal(true); // Open success modal
     }
   };

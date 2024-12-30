@@ -36,26 +36,24 @@ export default function Navbar() {
     const items = JSON.parse(dataItems) || {};
     setUserData(items);
 
-    // Check for query parameter to dynamically update without refresh
     const params = new URLSearchParams(window.location.search);
     if (params.get("loggedIn") === "true" && items.email && items.password) {
       setUserData(items);
     }
-  }, [window.location.search]); // Depend on query parameter changes
+  }, [window.location.search]);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
     setUserData({});
     alert("You have successfully logged out!");
 
-    // Remove query parameter on logout
+
     const params = new URLSearchParams(window.location.search);
     params.delete("loggedIn");
     navigate(`/register?${params.toString()}`);
   };
 
   const handleLogin = () => {
-    // Add query parameter for login
     const params = new URLSearchParams(window.location.search);
     params.set("loggedIn", "true");
     navigate(`?${params.toString()}`);
@@ -158,7 +156,7 @@ export default function Navbar() {
           </Toolbar>
         </AppBar>
       </Box>
-      <OpenDrawer open={open} toggleDrawer={toggleDrawer} />
+      <OpenDrawer open={open} toggleDrawer={toggleDrawer} handleLogout={handleLogout}/>
     </>
   );
 }

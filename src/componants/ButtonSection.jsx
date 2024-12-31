@@ -13,7 +13,7 @@ import tenImg from "../assets/nokia.svg";
 
 const ButtonSection = () => {
   return (
-    <Box className="container mx-auto  mt-32 md:mt-32 lg:mt-56">
+    <Box className="container mx-auto  mt-56 md:mt-32 lg:mt-56">
       <Box className="flex justify-between mx-5 my-5">
         <Typography variant="h6" className="font-bold">
           Shop by Price
@@ -111,39 +111,38 @@ const ButtonSection = () => {
         </Button>
       </Box>
       <Box className="flex justify-between flex-wrap gap-2">
-  {[
-    firstImg,
-    SEcImg,
-    thirdImg,
-    fourthImg,
-    fifthImg,
-    sixImg,
-    sevenImg,
-    eightImg,
-    nineImg,
-    tenImg,
-  ]
-    // Determine how many images to show based on screen size
-    .slice(
-      0,
-      window.innerWidth >= 1024 // Desktop and larger
-        ? 10
-        : window.innerWidth >= 768 // Laptop
-        ? 9
-        : window.innerWidth >= 640 // Tablet
-        ? 6
-        : 4 // Mobile
-    )
-    .map((imgSrc, index) => (
-      <Box
-        key={index}
-        className="w-20 h-20 flex justify-between items-center"
-      >
-        <img src={imgSrc} alt="" className="w-full h-full object-cover" />
+        {[
+          firstImg,
+          SEcImg,
+          thirdImg,
+          fourthImg,
+          fifthImg,
+          sixImg,
+          sevenImg,
+          eightImg,
+          nineImg,
+          tenImg,
+        ]
+          // Determine how many images to show based on screen size
+          .slice(
+            0,
+            window.innerWidth >= 1024 // Desktop and larger
+              ? 10
+              : window.innerWidth >= 768 // Laptop
+              ? 9
+              : window.innerWidth >= 640 // Tablet
+              ? 6
+              : 4 // Mobile
+          )
+          .map((imgSrc, index) => (
+            <Box
+              key={index}
+              className="w-20 h-20 flex justify-between items-center"
+            >
+              <img src={imgSrc} alt="" className="w-full h-full object-cover" />
+            </Box>
+          ))}
       </Box>
-    ))}
-</Box>
-
     </Box>
   );
 };

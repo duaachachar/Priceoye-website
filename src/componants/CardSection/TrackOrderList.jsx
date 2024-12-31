@@ -1,22 +1,12 @@
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  List,
-  Tooltip,
-  Typography,
-} from "@mui/material";
+import { Box, Button, List, Tooltip, Typography } from "@mui/material";
 import React from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { Link } from "react-router-dom";
 import banket from "../../assets/bucket.svg";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  removeItems,
-} from "./Delivery/ProductSlice";
+import { removeItems } from "./Delivery/ProductSlice";
 
 import Footer from "../Footer";
-
 
 const TrackOrderList = () => {
   const dispatch = useDispatch();
@@ -24,11 +14,10 @@ const TrackOrderList = () => {
   const { items } = useSelector((state) => state.products);
 
   console.log(items, "items");
-
   return (
     <Box className="h-screen bg-gray-100">
       <Box className="container flex pt-12 space-x-5 mb-12">
-        <Box className="w-1/4 bg-white p-4 shadow-lg shadow-gray-200 self-start">
+        <Box className="hidden lg:block w-1/4 bg-white p-4 shadow-lg shadow-gray-200 self-start">
           <List>Current Orders</List>
           <List>Pending Orders</List>
           <List>Review Pending</List>
@@ -37,7 +26,7 @@ const TrackOrderList = () => {
         </Box>
 
         <Box className="w-full">
-          <Box className="flex items-center p-3 bg-white shadow-lg shadow-gray-300">
+          <Box className="flex items-center p-3 bg-white shadow-lg shadow-gray-300 w-full">
             <ArrowBackIosIcon />
             <Link to="/account">
               <Typography variant="h6">Order History</Typography>
@@ -47,7 +36,7 @@ const TrackOrderList = () => {
           <Box
             className="bg-white w-full mt-2 overflow-y-auto"
             style={{
-              height: "400px", // Container ki maximum height
+              height: "400px",
               padding: "0",
             }}
           >

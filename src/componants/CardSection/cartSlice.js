@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  selectedItem: null, // To store the currently selected item
+  selectedItem: null, 
 };
 
 const cartSlice = createSlice({

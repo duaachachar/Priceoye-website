@@ -16,6 +16,8 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import login from "../../assets/login-header-img.svg";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -42,13 +44,25 @@ const Login = () => {
   });
 
   const LoginHandler = (data) => {
-    reset();
-    alert("Login successfull");
-    navigate("/");
+    // Reset form logic
+    toast.success("Successfully logged in!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    // Navigate logic
+    navigate('/')
   };
 
+
   return (
+
     <Box className="flex items-center justify-center">
+      <ToastContainer />
       <Card className="w-full sm:w-1/2 lg:w-1/2 max-w-lg mx-auto mt-12 ">
         <img className="w-full" src={login} alt="Login" />
         <Box className="py-2 px-7">

@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/card-detail/:id",
+        path: "/card-detail/:reviews",
         element: <CardDetail />,
       },
       {

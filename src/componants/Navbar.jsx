@@ -12,6 +12,9 @@ import { Button, Hidden, Menu, MenuItem, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import OpenDrawer from "./Drawer/OpenDrawer";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -35,32 +38,38 @@ export default function Navbar() {
     const dataItems = localStorage.getItem("user");
     const items = JSON.parse(dataItems) || {};
     setUserData(items);
-
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("loggedIn") === "true" && items.email && items.password) {
-      setUserData(items);
-    }
-  }, [window.location.search]);
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
     setUserData({});
-    alert("You have successfully logged out!");
-
-
-    const params = new URLSearchParams(window.location.search);
-    params.delete("loggedIn");
-    navigate(`/register?${params.toString()}`);
+    toast.error("Successfully logged out!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    navigate("/register");
   };
 
   const handleLogin = () => {
-    const params = new URLSearchParams(window.location.search);
-    params.set("loggedIn", "true");
-    navigate(`?${params.toString()}`);
+    toast.success("Successfully logged in!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    navigate("/");
   };
-
   return (
     <>
+    <ToastContainer/>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar className="bg-color">
@@ -156,7 +165,11 @@ export default function Navbar() {
           </Toolbar>
         </AppBar>
       </Box>
-      <OpenDrawer open={open} toggleDrawer={toggleDrawer} handleLogout={handleLogout}/>
+      <OpenDrawer
+        open={open}
+        toggleDrawer={toggleDrawer}
+        handleLogout={handleLogout}
+      />
     </>
   );
 }

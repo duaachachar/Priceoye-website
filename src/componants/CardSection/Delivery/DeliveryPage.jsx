@@ -14,9 +14,9 @@ import {
 import estimate from "../../../assets/estimate-icon.svg";
 import { Radio } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
 import { addProducts, increaseQuantity } from "./ProductSlice";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 
 const steps = ["OTP Verification", "Contact Info", "Delivery", "Payment"];
 
@@ -65,6 +65,7 @@ const DeliveryPage = () => {
     const items = JSON.parse(dataItems) || {};
     setUserData(items);
   }, []);
+
   const selectedItem = useSelector((state) => state.cart.selectedItem);
   console.log(selectedItem, "selectedItem");
 
@@ -72,31 +73,45 @@ const DeliveryPage = () => {
 
   const handleCheckout = () => {
     if (!selectedPaymentMethod) {
-      alert("Please select a payment method before proceeding to checkout.");
+      toast.error(
+        "Please select a payment method before proceeding to checkout.",
+        {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        }
+      );
     } else {
       // Dispatch product to track order list or any other action
       dispatch(addProducts(selectedItem));
-      dispatch(increaseQuantity(selectedItem))
-      setOpenModal(true); // Open success modal
+      dispatch(increaseQuantity(selectedItem));
+      setOpenModal(true);
     }
   };
 
   const handleNavigateToTrackOrder = () => {
-    setOpenModal(false); // Close modal
-    navigate("/track-order"); // Navigate to the track order page
+    setOpenModal(false);
+    navigate("/track-order");
   };
 
   return (
     <Box className="container mx-auto mt-5">
+      <ToastContainer />
       <Box className="grid grid-cols-12 gap-4">
-        <Box className="col-span-12 md:col-span-9">
-          <Stepper activeStep={activeStep} className="my-6">
-            {steps.map((label, index) => (
-              <Step key={index} completed={index < activeStep}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
+        <Box className="col-span-12 lg:col-span-9 md:col-span-12">
+          <Box sx={{ width: "100%" }}>
+            <Stepper activeStep={activeStep} className="my-6" alternativeLabel>
+              {steps.map((label, index) => (
+                <Step key={index} completed={index < activeStep}>
+                  <StepLabel>{label}</StepLabel>
+                </Step>
+              ))}
+            </Stepper>
+          </Box>
           <Box className="bg-white  p-4  rounded-md border-2 border-gray-200">
             <Typography variant="body2" className="font-bold">
               1. Mobile Number
@@ -303,122 +318,123 @@ const DeliveryPage = () => {
 
           {/* Display Payment Methods if "Standard Shipping" is selected */}
           {selectedDeliveryType === "Standard Shipping" && (
-         <Box className="bg-white p-4 my-3">
-         <Box className="flex justify-between my-3">
-           <Typography
-             variant="body2"
-             className="font-bold text-[18px] text-[#333] font-[Poppins]"
-           >
-             4. Choose Payment Method
-           </Typography>
-         </Box>
-       
-         {[
-           "Bank Transfer",
-           "Cash on Delivery",
-           "JazzCash",
-           "Credit / Debit Card",
-         ].map((method, index) => (
-           <Box key={index} className="p-2">
-             <Box className="flex items-center">
-               <Box className="flex items-center justify-center w-10 h-10 bg-white mr-4 border-2 border-[#eee] rounded-full shadow-md">
-                 <img
-                   src={
-                     method === "Credit / Debit Card"
-                       ? "https://priceoye.pk/assets/images/credit-icon.svg"
-                       : method === "JazzCash"
-                       ? "https://priceoye.pk/assets/images/cod-icon.svg"
-                       : "https://priceoye.pk/assets/images/bank-icon.svg"
-                   }
-                   alt={method}
-                 />
-               </Box>
-               <Box className="flex-grow">
-                 <p className="text-gray-700 font-[Roboto] text-[#555]">{method}</p>
-               </Box>
-               <Radio
-                 className="text-orange-500"
-                 checked={selectedPaymentMethod === method}
-                 onChange={() => handlePaymentMethodChange(method)}
-                 sx={{
-                   "&.Mui-checked": {
-                     color: "rgb(249 115 22)",
-                   },
-                 }}
-               />
-             </Box>
-           </Box>
-         ))}
-       
-         <Button
-           variant="contained"
-           onClick={handleCheckout}
-           className="bg-[#4caf50] text-white font-[Poppins] text-[16px] px-5 py-2 rounded-lg shadow-md"
-         >
-           Checkout
-         </Button>
-       
-         {/* Success Modal */}
-         <Modal
-           open={openModal}
-           onClose={() => setOpenModal(false)}
-           aria-labelledby="success-modal-title"
-           aria-describedby="success-modal-description"
-         >
-           <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[450px] bg-gradient-to-r from-[#f7faff] to-[#e0f7fa] rounded-lg p-10 shadow-lg text-center">
-             {/* Animated Tick */}
-             <Box className="flex items-center justify-center w-[100px] h-[100px] mx-auto bg-gradient-to-r from-[#e0f7fa] to-[#b2ebf2] rounded-full shadow-md mb-4">
-               <svg
-                 xmlns="http://www.w3.org/2000/svg"
-                 viewBox="0 0 52 52"
-                 className="w-[60%] h-[60%]"
-               >
-                 <circle
-                   cx="26"
-                   cy="26"
-                   r="25"
-                   fill="none"
-                   stroke="#4caf50"
-                   strokeWidth="3"
-                   className="circle"
-                 />
-                 <path
-                   fill="none"
-                   stroke="#4caf50"
-                   strokeWidth="4"
-                   d="M16 26l8 8 14-14"
-                   className="tick"
-                 />
-               </svg>
-             </Box>
-             <Typography
-               id="success-modal-title"
-               variant="h5"
-               className="font-[Poppins] text-[20px] text-[#333] mb-2"
-             >
-               🎉 Order Placed Successfully!
-             </Typography>
-             <Typography
-               id="success-modal-description"
-               className="font-[Roboto] text-[16px] text-[#555] mb-5"
-             >
-               Your product has been added to the track order list.
-             </Typography>
-             <Button
-               variant="contained"
-               onClick={handleNavigateToTrackOrder}
-               className="bg-green-300 text-white px-6 py-3 rounded-lg font-[Poppins] text-[16px] shadow-md"
-             >
-               Go to Track Order
-             </Button>
-           </Box>
-         </Modal>
-       </Box>
-       
+            <Box className="bg-white p-4 my-3">
+              <Box className="flex justify-between my-3">
+                <Typography
+                  variant="body2"
+                  className="font-bold text-[18px] text-[#333] font-[Poppins]"
+                >
+                  4. Choose Payment Method
+                </Typography>
+              </Box>
+
+              {[
+                "Bank Transfer",
+                "Cash on Delivery",
+                "JazzCash",
+                "Credit / Debit Card",
+              ].map((method, index) => (
+                <Box key={index} className="p-2">
+                  <Box className="flex items-center">
+                    <Box className="flex items-center justify-center w-10 h-10 bg-white mr-4 border-2 border-[#eee] rounded-full shadow-md">
+                      <img
+                        src={
+                          method === "Credit / Debit Card"
+                            ? "https://priceoye.pk/assets/images/credit-icon.svg"
+                            : method === "JazzCash"
+                            ? "https://priceoye.pk/assets/images/cod-icon.svg"
+                            : "https://priceoye.pk/assets/images/bank-icon.svg"
+                        }
+                        alt={method}
+                      />
+                    </Box>
+                    <Box className="flex-grow">
+                      <p className="text-gray-700 font-[Roboto] text-[#555]">
+                        {method}
+                      </p>
+                    </Box>
+                    <Radio
+                      className="text-orange-500"
+                      checked={selectedPaymentMethod === method}
+                      onChange={() => handlePaymentMethodChange(method)}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgb(249 115 22)",
+                        },
+                      }}
+                    />
+                  </Box>
+                </Box>
+              ))}
+
+              <Button
+                variant="contained"
+                onClick={handleCheckout}
+                className="bg-[#4caf50] text-white font-[Poppins] text-[16px] px-5 py-2 rounded-lg shadow-md"
+              >
+                Checkout
+              </Button>
+
+              {/* Success Modal */}
+              <Modal
+                open={openModal}
+                onClose={() => setOpenModal(false)}
+                aria-labelledby="success-modal-title"
+                aria-describedby="success-modal-description"
+              >
+                <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[450px] bg-gradient-to-r from-[#f7faff] to-[#e0f7fa] rounded-lg p-10 shadow-lg text-center">
+                  {/* Animated Tick */}
+                  <Box className="flex items-center justify-center w-[100px] h-[100px] mx-auto bg-gradient-to-r from-[#e0f7fa] to-[#b2ebf2] rounded-full shadow-md mb-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 52 52"
+                      className="w-[60%] h-[60%]"
+                    >
+                      <circle
+                        cx="26"
+                        cy="26"
+                        r="25"
+                        fill="none"
+                        stroke="#4caf50"
+                        strokeWidth="3"
+                        className="circle"
+                      />
+                      <path
+                        fill="none"
+                        stroke="#4caf50"
+                        strokeWidth="4"
+                        d="M16 26l8 8 14-14"
+                        className="tick"
+                      />
+                    </svg>
+                  </Box>
+                  <Typography
+                    id="success-modal-title"
+                    variant="h5"
+                    className="font-[Poppins] text-[20px] text-[#333] mb-2"
+                  >
+                    🎉 Order Placed Successfully!
+                  </Typography>
+                  <Typography
+                    id="success-modal-description"
+                    className="font-[Roboto] text-[16px] text-[#555] mb-5"
+                  >
+                    Your product has been added to the track order list.
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    onClick={handleNavigateToTrackOrder}
+                    className="bg-green-300 text-white px-6 py-3 rounded-lg font-[Poppins] text-[16px] shadow-md"
+                  >
+                    Go to Track Order
+                  </Button>
+                </Box>
+              </Modal>
+            </Box>
           )}
         </Box>
 
-        <Box className="col-span-12 md:col-span-3">
+        <Box className="col-span-12 lg:col-span-3 md:col-span-12">
           <Typography variant="body1" className="font-bold">
             Delivery Estimates
           </Typography>

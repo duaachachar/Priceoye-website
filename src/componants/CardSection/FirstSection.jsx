@@ -1,9 +1,8 @@
 import React from "react";
 import Banner from "../../assets/banner-2-pink.png";
-import { Box, Button, Card, Typography } from "@mui/material";
+import { Box, Button, Card, Tooltip, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import productData from "../../data/Productdata.json";
-
 
 import "swiper/css";
 import "swiper/css/grid";
@@ -17,10 +16,10 @@ import { useNavigate } from "react-router-dom";
 const FirstSection = () => {
   const navigate = useNavigate();
 
-  const handleNavigate = (id) => {
-    navigate(`/card-detail/${id}`);
+  const handleNavigate = (reviews) => {
+    navigate(`/card-detail/${reviews}`);
   };
- 
+
   return (
     <Box className="relative">
       <Box className="w-full mt-7 relative">
@@ -60,54 +59,57 @@ const FirstSection = () => {
             >
               {productData.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <Card
-                    className="shadow-lg shadow-slate-300 relative w-full"
-                    onClick={() => handleNavigate(item.id)}
-                  >
-                    <Box className="w-full pt-4">
-                      <img
-                        className="mx-auto object-contain"
-                        src={item?.Image}
-                        alt="img"
-                        style={{ maxWidth: "8rem", height: "auto" }}
-                    
-                      />
-                    </Box>
+                  <Tooltip title="View Details" arrow>
+                    <Card
+                      className="shadow-lg shadow-slate-300 relative w-full"
+                      onClick={() => handleNavigate(item.reviews)}
+                    >
+                      <Box className="w-full pt-4">
+                        <img
+                          className="mx-auto object-contain"
+                          src={item?.Image}
+                          alt="img"
+                          style={{ maxWidth: "8rem", height: "auto" }}
+                        />
+                      </Box>
 
-                    <Box className="absolute top-4 right-4">
-                      <img
-                        style={{ width: "4rem", height: "auto" }}
-                        className="object-contain"
-                        src={item?.SaleImg}
-                        alt="Sale"
-                      />
-                    </Box>
+                      <Box className="absolute top-4 right-4">
+                        <img
+                          style={{ width: "4rem", height: "auto" }}
+                          className="object-contain"
+                          src={item?.SaleImg}
+                          alt="Sale"
+                        />
+                      </Box>
 
-                    <Box
-                      className="p-4 cursor-pointer">
-                      <Typography
-                        variant="body2"
-                        className="text-sm font-bold truncate my-2"
-                      >
-                        {item?.reviews}
-                      </Typography>
+                      <Box className="p-4 cursor-pointer">
+                        <Typography
+                          variant="body2"
+                          className="text-sm font-bold truncate my-2"
+                        >
+                          {item?.reviews}
+                        </Typography>
 
-                      <Typography variant="h6" className="text-lg font-bold text-black">
-                        RS {item.price}
-                      </Typography>
+                        <Typography
+                          variant="h6"
+                          className="text-lg font-bold text-black"
+                        >
+                          RS {item.price}
+                        </Typography>
 
-                      <Box className="flex justify-between items-center space-x-2 mt-1">
-                        <span className="text-gray-500 line-through">
-                          Rs {item?.oldPrice}
-                        </span>
-                        <Box className="bg-gray-100 px-2 py-1 rounded-lg">
-                          <span className="text-green-500 text-sm">
-                            {item?.percent}
+                        <Box className="flex justify-between items-center space-x-2 mt-1">
+                          <span className="text-gray-500 line-through">
+                            Rs {item?.oldPrice}
                           </span>
+                          <Box className="bg-gray-100 px-2 py-1 rounded-lg">
+                            <span className="text-green-500 text-sm">
+                              {item?.percent}
+                            </span>
+                          </Box>
                         </Box>
                       </Box>
-                    </Box>
-                  </Card>
+                    </Card>
+                  </Tooltip>
                 </SwiperSlide>
               ))}
             </Swiper>

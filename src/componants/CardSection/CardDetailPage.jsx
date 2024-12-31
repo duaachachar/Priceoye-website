@@ -38,8 +38,8 @@ const CardDetailPage = () => {
   };
 
   const dispatch = useDispatch();
-  const { id } = useParams();
-  const card = productData.find((item) => item.id === parseInt(id));
+  const { reviews } = useParams();
+  const card = productData.find((item) => item.reviews);
 
   if (!card) {
     return <Typography variant="h6">Card not found</Typography>;
@@ -52,7 +52,7 @@ const CardDetailPage = () => {
 
   return (
     <Box>
-      <Box className="container mx-auto p-5">
+      <Box className="container mx-auto w-full p-4 overflow-hidden">
         <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
           <Box>
             <div className="flex flex-col items-center">
@@ -207,12 +207,17 @@ const CardDetailPage = () => {
             <div className="flex items-center space-x-5">
               <Button
                 variant="contained"
-                className="!bg-yellow-600 w-1/3"
+                className="!bg-yellow-600 w-1/2 sm:w-1/2 md:w-1/3"
                 onClick={handleAddToCart}
               >
-                <Link to="/delivery-page"> Add To Cart</Link>
+                <Link to="/delivery-page" className="text-white">
+                  Add To Cart
+                </Link>
               </Button>
-              <Button variant="contained" className="!bg-sky-600 w-1/3">
+              <Button
+                variant="contained"
+                className="!bg-sky-600 w-1/2 sm:w-1/2 md:w-1/3"
+              >
                 Compare
               </Button>
             </div>
@@ -248,7 +253,7 @@ const CardDetailPage = () => {
           </Box>
         </Box>
       </Box>
-      <Box className="bg-white">
+      <Box className="bg-white hidden md:block">
         <Box className="container mx-auto flex space-x-6 py-5">
           <Typography variant="body1">Highlights</Typography>
           <Typography variant="body1">Specifications</Typography>

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import React from "react";
+import { Link} from "react-router-dom";
 import {
   Box,
   Typography,
@@ -9,7 +9,6 @@ import {
   AccordionDetails,
   TextField,
 } from "@mui/material";
-import productData from "../../data/Productdata.json";
 import Footer from "../Footer";
 import official from "../../assets/officail.svg";
 import wararnty from "../../assets/approved-feature-1.svg";
@@ -21,34 +20,16 @@ import Img2 from "../../assets/2.svg";
 import Img3 from "../../assets/3.svg";
 import Img4 from "../../assets/4.svg";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useDispatch } from "react-redux";
-import { setSelectedItem } from "./cartSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Navigation, Thumbs } from "swiper/modules";
+import useDetail from "./useDetail";
 
 const CardDetailPage = () => {
-  const [expanded, setExpanded] = React.useState(false);
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const navigate = useNavigate();
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
 
-  const dispatch = useDispatch();
-  const { reviews } = useParams();
-  const card = productData.find((item) => item.reviews);
-
-  if (!card) {
-    return <Typography variant="h6">Card not found</Typography>;
-  }
-
-  const handleAddToCart = () => {
-    dispatch(setSelectedItem(card));
-    navigate("/delivery-page");
-  };
+const {expanded, thumbsSwiper, setThumbsSwiper, handleChange,handleAddToCart,card } = useDetail()
 
   return (
     <Box>

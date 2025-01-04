@@ -9,58 +9,25 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
+import React from "react";
+import { Controller } from "react-hook-form";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 import login from "../../assets/login-header-img.svg";
-import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useLogin from "./useLogin";
 
 const Login = () => {
-  const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-
-  const schema = yup.object({
-    email: yup.string().required("Your Email is Required"),
-    password: yup.string().required("Password is Required"),
-  });
-
-  const signInValue = {
-    email: "",
-    password: "",
-  };
-
   const {
+    LoginHandler,
     control,
     handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm({
-    defaultValues: signInValue,
-    resolver: yupResolver(schema),
-  });
-
-  const LoginHandler = (data) => {
-    // Reset form logic
-    toast.success("Successfully logged in!", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-    // Navigate logic
-    navigate('/')
-  };
-
+    errors,
+    showPassword,
+    setShowPassword,
+  } = useLogin();
 
   return (
-
     <Box className="flex items-center justify-center">
       <ToastContainer />
       <Card className="w-full sm:w-1/2 lg:w-1/2 max-w-lg mx-auto mt-12 ">
